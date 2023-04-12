@@ -28,21 +28,21 @@ html {
 }
 
 body {
-  font-family: Commissioner, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
-  line-height: 1.5;
+  line-height: 1.2;
   color: $black;
 
   background-color: white;
 
-  @include breakpoint ($sm-bp) {
+  @include breakpoint($sm-bp) {
     font-size: 1.6rem;
   }
 }
 
 main {
-  padding-top: 9.6rem;
+  padding-top: 10rem;
 }
 
 img {
@@ -54,10 +54,6 @@ a {
   text-decoration: none;
   color: $black;
   transition: all 0.1s linear;
-
-  &:hover {
-    color: $primary;
-  }
 }
 
 /* Vendors */
@@ -73,6 +69,10 @@ a {
 @import "blocks/filled-btn";
 @import "blocks/modal.scss";
 @import "blocks/section.scss";
+@import "blocks/dropdown.scss";
+@import "blocks/anim-fruit.scss";
+
+@import "blocks/intro.scss";
 
 @import "blocks/footer";
 

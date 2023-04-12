@@ -47,6 +47,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const dropdowns = document.querySelectorAll(".dropdown-container");
+
+  if (dropdowns.length) {
+    dropdowns.forEach((el) => {
+      const dropdownLink = el.querySelector(".dropdown-link");
+
+      dropdownLink.addEventListener("click", function () {
+        if (el.classList.contains("active")) {
+          el.classList.remove("active");
+        } else {
+          el.classList.add("active");
+        }
+      });
+    });
+  }
+
+  // обработчик кликов по документу
+  document.addEventListener("click", function (event) {
+    const activeDropdowns = document.querySelectorAll(
+      ".dropdown-container.active"
+    );
+
+    if (
+      activeDropdowns.length &&
+      !event.target.closest(".dropdown-container")
+    ) {
+      activeDropdowns.forEach((dropdown) => {
+        dropdown.classList.remove("active");
+      });
+    }
+  });
+
   // tabs
 
   class ItcTabs {

@@ -2,10 +2,37 @@
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">
-                <img src="assets/images/logo-icon.png" alt="">
-                <img src="assets/images/logo-text.svg" alt="">
+                <img class="header__logo-img" src="assets/images/logo.svg" alt="">
+                <p class="header__logo-descr">Кондитерская фабрика</p>
             </div>
-            <nav class="menu">
+            <div class="header-links">
+                <a class="catalog-link" href="#">Скачать каталог</a>
+                <div class="buy-online dropdown-container">
+                    <p class="dropdown-link">
+                        Заказать в интернет-магазине
+                        <svg>
+                            <use href="#chevron"></use>
+                        </svg>
+                    </p>
+                    <div class="dropdown-list">
+                        <a href="#">Заказать на Wildberries</a>
+                        <a href="#">Заказать на Ozon</a>
+                    </div>
+                </div>
+                <a class="header__link" href="tel:+74954191997">+7 (495) 419-19-97</a>
+            </div>
+            <a class="header__link" href="mailto:office@kremlina.ru">office@kremlina.ru</a>
+            <div class="header__lang dropdown-container">
+                <p class="dropdown-link">Ru</p>
+                <div class="dropdown-list">
+                    <a href="#">En</a>
+                    <a href="#">Ch</a>
+                </div>
+            </div>
+            <div class="burger-menu">
+                <div class="burger"></div>
+            </div>
+            <nav class="menu hide">
                 <ul class="menu__nav-list">
                     <li class="nav-list__item">
                         <a href="#opportunities" class="nav-list__item-link">Наши возможности</a>
@@ -18,10 +45,6 @@
                     </li>
                 </ul>
             </nav>
-
-            <div class="burger-menu">
-                <div class="burger"></div>
-            </div>
         </div>
     </div>
 </header>

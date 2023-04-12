@@ -8,7 +8,7 @@ const removeComments = require("gulp-strip-css-comments");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass")(require("sass"));
 const cssnano = require("gulp-cssnano");
-const babel = require("gulp-babel");
+// const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const rigger = require("gulp-rigger");
 const plumber = require("gulp-plumber");
@@ -137,13 +137,7 @@ function cssWatch(cb) {
 function js(cb) {
   return src(path.src.js, { base: srcPath + "assets/js/" })
     .pipe(rigger())
-    .pipe(
-      babel({
-        presets: ["@babel/preset-env"],
-      })
-    )
     .pipe(gulp.dest(path.build.js))
-    .pipe(uglify())
     .pipe(
       rename({
         suffix: ".min",
@@ -159,13 +153,7 @@ function js(cb) {
 function jsWatch(cb) {
   return src(path.src.js, { base: srcPath + "assets/js/" })
     .pipe(rigger())
-    .pipe(
-      babel({
-        presets: ["@babel/preset-env"],
-      })
-    )
     .pipe(gulp.dest(path.build.js))
-    .pipe(uglify())
     .pipe(
       rename({
         suffix: ".min",
