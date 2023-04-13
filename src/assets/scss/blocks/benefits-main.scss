@@ -1,0 +1,55 @@
+.benefits-main__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8rem;
+}
+
+.benefits-main__img {
+  width: 100%;
+  max-width: 82rem;
+}
+
+.benefits-main__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 4rem;
+}
+.benefits-main__item {
+  position: relative;
+  width: 41rem;
+  height: 15.4rem;
+
+  padding: 4rem;
+
+  border: 0.2rem solid #e5dfe0;
+  border-radius: 2rem;
+
+  &:nth-child(even) {
+    margin-top: 12rem;
+  }
+  &:nth-child(odd) {
+    margin-top: -1rem;
+  }
+}
+.benefits-main__item-title {
+  position: absolute;
+  left: 2rem;
+  top: -4rem;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: $primary;
+
+  padding: 1rem 2rem;
+
+  background: #ffffff;
+  border-radius: 1rem;
+}
+.benefits-main__item-descr {
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+}

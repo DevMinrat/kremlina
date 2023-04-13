@@ -13,16 +13,41 @@
   height: 100%;
 }
 
-.intro-slider__slide {
-  display: flex;
-  gap: 1rem;
+.intro-slider__first {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 53.5%;
+    z-index: 3;
+
+    width: 53rem;
+    height: 0.2rem;
+
+    background: #ddccf2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 64%;
+    top: 80.3%;
+    z-index: 3;
+
+    width: 63.6rem;
+    height: 0.2rem;
+
+    background: #ddccf2;
+  }
 }
 
 .is-slide__content {
   position: absolute;
   left: 50%;
   top: 51%;
-  z-index: 1;
+  z-index: 10;
   transform: translate(-50%, -50%);
 
   display: flex;

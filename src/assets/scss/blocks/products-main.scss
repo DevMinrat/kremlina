@@ -1,0 +1,159 @@
+.products-main {
+}
+.products-main__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.pm-cat {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 39rem;
+
+  padding: 4rem;
+
+  border-radius: 2rem;
+
+  cursor: url(../images/main-products/cursor.svg) 55 55, pointer;
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 2rem;
+
+    background: rgba(76, 59, 60, 0.6);
+
+    opacity: 0;
+    transition: all 0.1s linear;
+  }
+
+  img {
+    width: 100%;
+    max-width: 27.4rem;
+  }
+
+  &:nth-child(3n + 1) {
+    width: 101rem;
+  }
+
+  &:nth-child(1) {
+    .pm-cat__tags {
+      max-width: 49rem;
+    }
+    img {
+      max-width: 31.9rem;
+    }
+  }
+  &:nth-child(2) {
+    width: 71rem;
+
+    .pm-cat__tags {
+      max-width: 24rem;
+    }
+    img {
+      max-width: 27.7rem;
+    }
+  }
+  &:nth-child(3) {
+    width: 71rem;
+
+    .pm-cat__tags {
+      max-width: 31rem;
+    }
+  }
+  &:nth-child(4) {
+    .pm-cat__tags {
+      max-width: 50rem;
+    }
+    img {
+      width: 100%;
+      max-width: 32.1rem;
+    }
+  }
+  &:nth-child(5) {
+    width: 86rem;
+
+    padding-right: 2rem;
+
+    .pm-cat__tags {
+      max-width: 39rem;
+    }
+  }
+  &:nth-child(6) {
+    width: 86rem;
+
+    padding-right: 2rem;
+
+    img {
+      margin-left: -4rem;
+    }
+
+    .pm-cat__tags {
+      max-width: 57rem;
+    }
+  }
+  &:nth-child(7) {
+    padding-right: 2rem;
+
+    .pm-cat__tags {
+      max-width: 51rem;
+    }
+  }
+  &:nth-child(8) {
+    width: 71rem;
+
+    padding-right: 2rem;
+
+    .pm-cat__tags {
+      max-width: 37.5rem;
+    }
+  }
+}
+.pm-cat__title {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+}
+
+.pm-cat__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.pm-cat__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  width: 100%;
+}
+
+.pm-cat__tags-item {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  padding: 0.6rem 1.2rem;
+
+  border: 0.1rem solid #4c3b3c;
+  border-radius: 1rem;
+}

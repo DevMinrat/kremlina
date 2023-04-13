@@ -1,26 +1,13 @@
 .section {
-  padding: 10rem 0;
-
-  @include breakpoint($lg-bp) {
-    padding: 7rem 0;
-  }
+  margin: 22rem 0;
 }
 
 .section-title {
+  font-family: "Nunito";
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 5.8rem;
   line-height: 100%;
-  text-transform: uppercase;
   color: $black;
 
-  margin-bottom: 3rem;
-  padding-left: 8rem;
-
-  @include breakpoint($lg-bp) {
-    font-size: 3rem;
-  }
-
-  @include breakpoint($sm-bp) {
-    padding-left: 0;
-  }
+  margin-bottom: 6rem;
 }

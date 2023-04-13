@@ -24,8 +24,7 @@
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 6rem;
+  gap: 9.2rem;
 }
 
 .header__logo {
@@ -37,14 +36,14 @@
 .header__logo-img {
   width: 100%;
   max-width: 18.1rem;
+
+  margin-bottom: 1rem;
 }
 
 .header__logo-descr {
   font-family: "Nunito";
   font-weight: 700;
   text-transform: uppercase;
-
-  margin-top: 1.1rem;
 }
 
 .header-links {
@@ -70,9 +69,11 @@
   }
 
   .dropdown-link {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    border-bottom: 0.1rem solid $primary;
+    span {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      border-bottom: 0.1rem solid $primary;
+    }
 
     svg {
       stroke: $primary;
@@ -82,6 +83,12 @@
   .header__link {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 400;
+  }
+}
+
+.header__lang {
+  .dropdown-list {
+    min-width: 5.2rem;
   }
 }
 
