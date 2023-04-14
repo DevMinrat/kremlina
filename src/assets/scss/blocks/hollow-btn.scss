@@ -1,35 +1,66 @@
 .hollow-btn {
-  width: 100%;
-  max-width: 19.2rem;
-  height: 5.2rem;
+  box-sizing: border-box;
+  width: max-content;
+  height: 5rem;
 
   display: flex;
   align-items: center;
 
-  font-size: 1.6rem;
-  color: $primary;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $black;
 
-  padding: 1.4rem 3.2rem;
+  padding: 1.4rem 3rem;
 
   background-color: transparent;
-  border: 1px solid #595187;
-  border-radius: 7.2rem;
+  border: 0.2rem solid $black;
+  border-radius: 1rem;
 
   transition: all 0.2s ease;
 
-  svg {
-    margin-left: 0.6rem;
+  &:hover {
+    color: $primary;
+
+    background: rgba(196, 22, 29, 0.1);
+    border-color: $primary;
   }
 
-  &:hover {
+  &:active {
     color: white;
+    background: $primary;
+    border-color: $primary;
+  }
 
-    background-color: $accent;
-    border-color: $accent;
+  &[aria-disabled="true"],
+  &:disabled {
+    color: #998485;
+    border-color: #998485;
+  }
 
-    svg {
-      fill: white;
-      margin-left: 1.6rem;
+  &.white {
+    color: white;
+    border-color: white;
+
+    &:hover {
+      color: $primary;
+
+      background: rgba(196, 22, 29, 0.1);
+      border-color: $primary;
+    }
+
+    &:active {
+      color: white;
+      background: $primary;
+      border-color: $primary;
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      color: #998485;
+      border-color: #998485;
     }
   }
 }
