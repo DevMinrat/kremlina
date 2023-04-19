@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector(".menu");
 
     burger.addEventListener("click", () => {
-      burger.classList.toggle("menu-on");
+      burger.classList.toggle("active");
       menu.classList.toggle("active");
 
-      if (burger.classList.contains("menu-on")) {
+      if (burger.classList.contains("active") && window.innerWidth <= 500) {
         scrollLock.disablePageScroll();
       } else {
         scrollLock.enablePageScroll();
@@ -169,18 +169,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Anchor smooth scroll
+  // products show all
 
-  const pageLinks = document.querySelectorAll('a[href^="#"]');
+  const productsMain = document.querySelector(".products-main");
+  const productsMainBtn = document.querySelector(".products-main__show-all");
 
-  if (pageLinks.length > 0) {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        });
-      });
+  if (productsMainBtn) {
+    productsMainBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (productsMain.classList.contains("rolled")) {
+        productsMain.classList.remove("rolled");
+        productsMainBtn.innerText = "показать все разделы";
+      } else {
+        productsMain.classList.add("rolled");
+        productsMainBtn.innerText = "скрыть все разделы";
+      }
+    });
+  }
+
+  // sertif show all
+
+  const sertif = document.querySelector(".sertif");
+  const sertifBtn = document.querySelector(".sertif__show-all");
+
+  if (sertif) {
+    sertifBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (sertif.classList.contains("rolled")) {
+        sertif.classList.remove("rolled");
+        sertifBtn.innerText = "Показать все сертификаты";
+      } else {
+        sertif.classList.add("rolled");
+        sertifBtn.innerText = "Скрыть все сертификаты";
+      }
     });
   }
 

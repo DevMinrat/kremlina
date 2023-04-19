@@ -76,6 +76,13 @@ a {
 @import "blocks/products-main.scss";
 @import "blocks/benefits-main.scss";
 
+@import "blocks/history.scss";
+@import "blocks/about.scss";
+@import "blocks/news-block.scss";
+@import "blocks/achievements.scss";
+@import "blocks/sertif.scss";
+@import "blocks/rewards.scss";
+
 @import "blocks/footer";
 
 .fixed-price-btn {
@@ -101,6 +108,32 @@ a {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.flag-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  padding: 0.2rem 0.6rem;
+
+  background: $primary;
+  border-radius: 0.4rem;
+}
+
+.flag-item {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .hide {

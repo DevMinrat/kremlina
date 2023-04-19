@@ -1,0 +1,53 @@
+.history {
+  .section-title {
+    margin-bottom: 8rem;
+  }
+}
+
+.history-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 19rem;
+
+  max-width: 161rem;
+}
+.history-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  &:not(:last-child) {
+    &::after {
+      content: "";
+      position: absolute;
+      right: -36%;
+      top: 5rem;
+      z-index: 1;
+
+      width: 28rem;
+      height: 0.2rem;
+      background: #e5dfe0;
+    }
+
+    & .history-item__date {
+      color: white;
+      text-shadow: -0.2rem -0.2rem 0 $black, 0.2rem -0.2rem 0 $black,
+        -0.2rem 0.2rem 0 $black, 0.2rem 0.2rem 0 $black;
+    }
+  }
+}
+.history-item__date {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 10rem;
+  line-height: 100%;
+  color: #efac3d;
+}
+.history-item__descr {
+  width: 100%;
+  max-width: 41rem;
+
+  line-height: 1.5;
+}

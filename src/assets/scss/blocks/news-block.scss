@@ -1,0 +1,42 @@
+.news-block {
+}
+.news-block__slider {
+  position: relative;
+}
+.news-block__item {
+  width: 100%;
+  max-width: 176rem;
+
+  display: flex;
+
+  background: #f1eeef;
+  border-radius: 2rem;
+
+  overflow: hidden;
+}
+.news-block__item-img {
+  width: 100%;
+  max-width: 99rem;
+}
+.news-block__item-content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  padding: 6rem 11rem 6rem 6rem;
+}
+.news-block__item-title {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+
+  margin-bottom: 6rem;
+}
+.news-block__item-date {
+  font-size: 1.6rem;
+
+  margin-top: auto;
+}
+.swiper-navigation {
+}

@@ -1,3 +1,7 @@
+.benefits-main {
+  position: relative;
+}
+
 .benefits-main__inner {
   display: flex;
   align-items: flex-start;
@@ -52,4 +56,12 @@
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 150%;
+}
+
+.benefits-leaf {
+  top: 5%;
+  left: 35%;
+  width: 12rem;
+  transform: rotate(-18deg);
+  filter: drop-shadow(0px 1rem 15px rgba(76, 59, 60, 0.1));
 }

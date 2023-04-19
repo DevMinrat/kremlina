@@ -1,0 +1,49 @@
+.rewards {
+}
+.rewards-title {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: #c4161d;
+
+  margin-bottom: 4.6rem;
+}
+
+.rewards__inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.rewards-slider {
+  .swiper-wrapper {
+    align-items: center;
+  }
+}
+.rewards-item {
+  width: 41rem;
+
+  img {
+    width: 100%;
+  }
+}
+.rewards-medal {
+  position: relative;
+
+  width: 86rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rewards-medal__img {
+  width: 100%;
+  max-width: 35.8rem;
+}
+.rewards-medal__descr {
+  position: absolute;
+  right: 0;
+  top: 40%;
+
+  max-width: 26rem;
+}

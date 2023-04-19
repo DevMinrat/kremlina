@@ -1,0 +1,71 @@
+.sertif {
+  &.rolled {
+    .sertif__inner {
+      max-height: 300rem;
+    }
+  }
+}
+.sertif__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  margin-bottom: 8rem;
+  padding-top: 3rem;
+
+  overflow: hidden;
+  max-height: 63rem;
+
+  transition: all 0.7s ease-out;
+}
+.sertif-item {
+  width: 41rem;
+
+  &:nth-child(2) {
+    img {
+      transform: scale(1.13);
+      transform-origin: top right;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+.sertif-item--main {
+  position: relative;
+
+  padding: 4rem;
+
+  border: 0.2rem solid #e5dfe0;
+  border-radius: 2rem;
+}
+.sertif-item__title {
+  position: absolute;
+  top: -4rem;
+  left: 2rem;
+  z-index: 1;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: $primary;
+
+  padding: 1rem 2rem;
+
+  background: #ffffff;
+  border-radius: 1rem;
+}
+.sertif-item__descr {
+  line-height: 1.5;
+
+  p + p {
+    margin-top: 2rem;
+  }
+}
+
+.sertif__show-all {
+  display: block;
+  margin: 0 auto;
+}

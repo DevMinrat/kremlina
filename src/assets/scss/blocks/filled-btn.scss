@@ -1,37 +1,39 @@
 .filled-btn {
-  width: 100%;
-  max-width: 19.2rem;
-  height: 5.2rem;
+  box-sizing: border-box;
+  width: max-content;
+  height: 5rem;
 
   display: flex;
   align-items: center;
 
-  font-size: 1.6rem;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-transform: uppercase;
   color: white;
 
-  padding: 1.4rem 3.2rem;
+  padding: 1.4rem 3rem;
 
-  background-color: $accent;
-  border: 1px solid $accent;
-  border-radius: 7.2rem;
+  background-color: $primary;
+  border: 0.2rem solid $primary;
+  border-radius: 1rem;
 
   transition: all 0.2s ease;
 
-  svg {
-    width: 2.4rem;
-    height: 2.4rem;
-
-    fill: white;
-    margin-left: 1.6rem;
+  &:hover {
+    background: #9d1217;
+    border-color: #9d1217;
   }
 
-  &:hover {
-    color: $accent;
-    background-color: transparent;
+  &:active {
+    background: #760d11;
+    border-color: #760d11;
+  }
 
-    svg {
-      fill: $accent;
-      margin-left: 2rem;
-    }
+  &[aria-disabled="true"],
+  &:disabled {
+    background-color: #dc7377;
+    border-color: #dc7377;
   }
 }

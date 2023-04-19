@@ -1,9 +1,21 @@
 .products-main {
+  position: relative;
+
+  &.rolled {
+    .products-main__inner {
+      max-height: 300rem;
+    }
+  }
 }
 .products-main__inner {
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
+
+  overflow: hidden;
+  max-height: 82rem;
+
+  transition: all 0.7s ease-out;
 }
 .pm-cat {
   position: relative;
@@ -156,4 +168,17 @@
 
   border: 0.1rem solid #4c3b3c;
   border-radius: 1rem;
+}
+
+.products-main__show-all {
+  display: block;
+  margin: 8rem auto 0;
+}
+
+.products-leaf {
+  top: 1%;
+  left: 51%;
+  width: 17rem;
+  transform: rotate(210deg);
+  filter: drop-shadow(0px 1rem 1.5rem rgba(76, 59, 60, 0.15));
 }
