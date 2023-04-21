@@ -209,22 +209,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // accordeon
 
-  //   const faqAccTitle = document.querySelectorAll(".faq__item-title"),
-  //     faqAccText = document.querySelectorAll(".faq__item-descr");
+  class Accordion {
+    constructor(element) {
+      this.element = element;
+      this.button = this.element.querySelector(".accordion__heading");
+      this.content = this.element.querySelector(".accordion__content");
+      this.button.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        if (this.element.classList.contains("active")) {
+          window.location.href = this.button.getAttribute("href");
+        } else {
+          this.toggleContent();
+        }
+      });
+    }
 
-  //   if (faqAccTitle.length > 0) {
-  //     for (let i = 0; i < faqAccTitle.length; i++) {
-  //       faqAccTitle[i].addEventListener("click", function () {
-  //         this.classList.toggle("active");
+    toggleContent() {
+      this.content.classList.toggle("active");
+      this.element.classList.toggle("active");
+    }
+  }
 
-  //         let panel = faqAccText[i];
-
-  //         if (panel.style.maxHeight) {
-  //           panel.style.maxHeight = null;
-  //         } else {
-  //           panel.style.maxHeight = panel.scrollHeight + "px";
-  //         }
-  //       });
-  //     }
-  //   }
+  const accordions = document.querySelectorAll(".accordion");
+  if (accordions.length) {
+    accordions.forEach((accordion) => new Accordion(accordion));
+  }
 });

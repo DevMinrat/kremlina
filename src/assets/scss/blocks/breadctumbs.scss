@@ -1,0 +1,58 @@
+.breadcrumb-wrapper {
+  display: flex;
+  align-items: center;
+
+  padding: 0.3rem 0;
+
+  @include breakpoint($lg-bp) {
+    padding-left: 6rem;
+
+    .container {
+      max-width: 67.5rem;
+    }
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb a::after {
+  content: "";
+  display: inline-block;
+  margin: 0 2rem;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: rotate(-90deg);
+
+  background: url(../images/icons/chevron.svg) no-repeat;
+  background-size: cover;
+}
+
+.breadcrumb span,
+.breadcrumb a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: $primary;
+  line-height: 150%;
+  color: #beb0b0;
+
+  transition: all 0.2s linear;
+
+  @include breakpoint($lg-bp) {
+    font-size: 3.2rem;
+  }
+}
+
+.breadcrumb span {
+  color: $black;
+}
+
+.breadcrumb a:hover {
+  color: $primary;
+}

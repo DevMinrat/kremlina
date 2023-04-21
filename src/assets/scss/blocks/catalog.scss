@@ -1,0 +1,156 @@
+.catalog {
+  padding-top: 8rem;
+  padding-bottom: 22rem;
+
+  .breadcrumb-wrapper {
+    margin-bottom: 6rem;
+  }
+}
+
+.catalog__inner {
+  display: flex;
+  gap: 4rem;
+}
+
+.catalog-aside {
+  width: 100%;
+  max-width: 41rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 3rem;
+
+  border: 0.2rem solid #e5dfe0;
+  border-radius: 2rem;
+
+  .accordion {
+    &.active {
+      .accordion__heading {
+        margin-bottom: 1rem;
+
+        background: $secondary;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .accordion__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.6rem;
+
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke: $black;
+    fill: none;
+
+    transition: all 0.1s linear;
+  }
+}
+.catalog-aside__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.6rem;
+
+  padding: 1rem;
+
+  border-radius: 1rem;
+
+  &.active,
+  &:hover {
+    background: $secondary;
+  }
+
+  & .flag-new {
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+.catalog-aside__sublink {
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  padding: 0.5rem 1rem 0.5rem 3rem;
+
+  &.active,
+  &:hover {
+    color: $primary;
+  }
+}
+
+.catalog-title {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: $black;
+
+  margin-bottom: 4rem;
+}
+
+.catalog__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem 4rem;
+}
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  width: 100%;
+  max-width: 41rem;
+
+  &:hover {
+    .catalog-item__name {
+      color: $primary;
+    }
+    .catalog-item__img {
+      transform: rotate(-10deg);
+    }
+  }
+}
+.catalog-item__img-wrapper {
+  padding: 4rem;
+
+  background: #f1eeef;
+  border-radius: 2rem;
+}
+.catalog-item__img {
+  width: 100%;
+  max-width: 33rem;
+
+  transition: all 0.3s ease-out;
+}
+.catalog-item__name {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-align: center;
+  color: $black;
+}
