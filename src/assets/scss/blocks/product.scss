@@ -1,0 +1,172 @@
+.product {
+  padding-top: 8rem;
+  margin-bottom: 20rem;
+
+  .breadcrumb-wrapper {
+    margin-bottom: 6rem;
+  }
+}
+
+.product__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.product__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.product-main {
+  width: 71rem;
+}
+.product-heading {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: #c4161d;
+
+  margin-bottom: 2rem;
+}
+.product-descr {
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  margin-bottom: 2.2rem;
+}
+.product-img__wrapper {
+  position: relative;
+
+  width: 60rem;
+  height: 60rem;
+
+  margin: 0 auto;
+}
+.product-img__blur-circle {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 4rem;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.6);
+  border: 0.2rem solid #fec6a6;
+  backdrop-filter: blur(1rem);
+
+  .blur-circle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52rem;
+    height: 52rem;
+
+    background: #fec6a6;
+    border-radius: 50%;
+  }
+}
+.product-img {
+  width: 100%;
+  max-width: 40rem;
+}
+.product-cherry {
+  top: 26%;
+  left: -12%;
+  max-width: 19rem;
+}
+.product-almond {
+  top: 3%;
+  left: 80%;
+  max-width: 13rem;
+  transform: rotate(38deg);
+}
+.product-prunes {
+  top: 71%;
+  left: 60%;
+  transform: rotate(-20deg);
+  max-width: 19rem;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+
+  width: 56rem;
+
+  padding: 4rem;
+
+  border: 0.2rem solid #e5dfe0;
+  border-radius: 2rem;
+}
+.product-info__data {
+}
+.pi-data {
+}
+.pi-data__header {
+  display: flex;
+  gap: 2rem;
+
+  border-bottom: 0.1rem solid #e5dfe0;
+}
+.pi-data__title {
+  flex-basis: 50%;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  padding-bottom: 2rem;
+}
+
+.pi-data__title-count {
+  flex-basis: 25%;
+
+  font-size: 1.6rem;
+  line-height: 150%;
+  text-align: right;
+  color: #beb0b0;
+}
+.pi-data__item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem 0;
+
+  border-bottom: 0.1rem solid #e5dfe0;
+}
+.pi-data__prop {
+  flex-basis: 50%;
+
+  font-size: 1.6rem;
+}
+.pi-data__value {
+  flex-basis: 25%;
+
+  font-size: 1.6rem;
+  text-align: right;
+}
+.product-info__descr {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.product-info__btns {
+  display: flex;
+  gap: 4rem;
+}
+.product-info__btn {
+  flex-basis: 50%;
+
+  padding: 1.2rem 2rem;
+}

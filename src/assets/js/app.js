@@ -215,8 +215,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const accordions = document.querySelectorAll(".accordion");
+  const accordionsSub = document.querySelectorAll(".accordion-sub");
   if (accordions.length) {
     accordions.forEach((accordion) => new Accordion(accordion));
+    accordionsSub.forEach((accordionsSub) => new Accordion(accordionsSub));
   }
 
   // filter dropdown
