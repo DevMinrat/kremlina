@@ -9,6 +9,7 @@
 
 .catalog__inner {
   display: flex;
+  align-items: flex-start;
   gap: 4rem;
 }
 
@@ -115,6 +116,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6rem 4rem;
+
+  margin-bottom: 8rem;
 }
 .catalog-item {
   display: flex;
@@ -137,7 +140,7 @@
 .catalog-item__img-wrapper {
   padding: 4rem;
 
-  background: #f1eeef;
+  background: #fef4f1;
   border-radius: 2rem;
 }
 .catalog-item__img {
@@ -153,4 +156,77 @@
   line-height: 120%;
   text-align: center;
   color: $black;
+}
+
+.catalog__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.catalog__nav-item {
+  width: 3rem;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $black;
+
+  border-radius: 1rem;
+  background-color: transparent;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:not(.disable):hover {
+    svg {
+      stroke: $primary;
+    }
+  }
+
+  &:first-child,
+  &:last-child {
+    border: none;
+  }
+
+  &:first-child {
+    margin-right: 0.4rem;
+  }
+  &:last-child {
+    margin-left: 0.4rem;
+  }
+
+  &.active {
+    color: white;
+
+    background-color: $primary;
+  }
+
+  &.disable {
+    svg {
+      fill: #eceae9;
+    }
+  }
+
+  svg {
+    width: 3.2rem;
+    height: 3.2rem;
+
+    stroke: $black;
+  }
+
+  .cp-nav__icon-prev {
+    transform: rotate(180deg);
+  }
 }

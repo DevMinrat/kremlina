@@ -1,4 +1,7 @@
 .catalog-filters {
+  display: flex;
+  gap: 2rem;
+
   margin-bottom: 4rem;
 }
 
@@ -14,18 +17,27 @@
   width: max-content;
   min-width: 26rem;
 
-  padding: 1.3rem 1.6rem;
-
   border: 0.1rem solid #beb0b0;
   border-radius: 1rem;
 
   cursor: pointer;
+
+  &.active {
+    .cf__heading svg {
+      transform: rotate(180deg);
+    }
+    .cf__content {
+      display: flex;
+    }
+  }
 }
 
 .cf__heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 1.3rem 1.6rem;
 
   svg {
     width: 1.2rem;
@@ -66,10 +78,10 @@
 .cf__content {
   position: absolute;
   left: 0;
-  top: 5rem;
+  top: 6rem;
   z-index: 1;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.8rem;
 
@@ -80,4 +92,55 @@
   background: #ffffff;
   box-shadow: 0 0 1.5rem rgba(76, 59, 60, 0.15);
   border-radius: 1rem;
+}
+
+.cf__content-cat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  margin-top: 1.5rem;
+
+  .content-cat__heading {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: $primary;
+
+    margin-bottom: 0.4rem;
+  }
+}
+
+.catalog-filters__choosed {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.catalog-filter__chosen {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1.6rem;
+
+  padding: 0.6rem 1.2rem;
+
+  border: 0.1rem solid $black;
+  border-radius: 1rem;
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+
+    stroke: #998485;
+
+    cursor: pointer;
+
+    &:hover {
+      stroke: $black;
+    }
+  }
 }

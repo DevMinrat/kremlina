@@ -63,22 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // обработчик кликов по документу
-  document.addEventListener("click", function (event) {
-    const activeDropdowns = document.querySelectorAll(
-      ".dropdown-container.active"
-    );
-
-    if (
-      activeDropdowns.length &&
-      !event.target.closest(".dropdown-container")
-    ) {
-      activeDropdowns.forEach((dropdown) => {
-        dropdown.classList.remove("active");
-      });
-    }
-  });
-
   // tabs
 
   class ItcTabs {
@@ -234,4 +218,106 @@ document.addEventListener("DOMContentLoaded", () => {
   if (accordions.length) {
     accordions.forEach((accordion) => new Accordion(accordion));
   }
+
+  // filter dropdown
+
+  const catalogFilters = document.querySelectorAll(".catalog-filter");
+  if (catalogFilters.length) {
+    catalogFilters.forEach((select) => {
+      const heading = select.querySelector(".cf__heading");
+      heading.addEventListener("click", () => {
+        select.classList.toggle("active");
+      });
+    });
+
+    const filtersWrapper = document.querySelector(".catalog-filters");
+    const filterCheckboxes =
+      filtersWrapper.querySelectorAll(".custom-checkbox");
+
+    filterCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", function () {
+        const text = this.nextElementSibling.nextElementSibling.innerText;
+
+        if (this.checked) {
+          const block = createChosenBlock(text);
+          document
+            .querySelector(".catalog-filters__choosed")
+            .appendChild(block);
+
+          const deleteButton = block.querySelector("svg");
+          deleteButton.addEventListener("click", function () {
+            block.remove();
+            checkbox.checked = false;
+            setFilterCount(filterParent);
+          });
+        } else {
+          const chosenBlock = document.querySelector(`div[data-id="${text}"]`);
+          chosenBlock.remove();
+        }
+
+        const filterParent = checkbox.closest(".catalog-filter");
+        setFilterCount(filterParent);
+      });
+    });
+
+    function createChosenBlock(text) {
+      const block = document.createElement("div");
+      block.classList.add("catalog-filter__chosen");
+      block.setAttribute("data-id", text);
+
+      const span = document.createElement("span");
+      span.innerText = text;
+      block.appendChild(span);
+
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.innerHTML = '<use xlink:href="#cross"></use>';
+
+      block.appendChild(svg);
+
+      return block;
+    }
+
+    function setFilterCount(parent) {
+      const checkedItems = parent.querySelectorAll(".custom-checkbox:checked");
+      const filerHeading = parent.querySelector(".cf__heading-name");
+
+      if (checkedItems.length > 0) {
+        if (!filerHeading.querySelector(".count")) {
+          const span = document.createElement("span");
+          span.classList.add("count");
+          span.innerText = checkedItems.length;
+
+          filerHeading.appendChild(span);
+        } else {
+          filerHeading.querySelector(".count").innerText = checkedItems.length;
+        }
+      } else {
+        filerHeading.querySelector(".count").remove();
+      }
+    }
+  }
+
+  // обработчик кликов по документу
+  document.addEventListener("click", function (event) {
+    const activeDropdowns = document.querySelectorAll(
+      ".dropdown-container.active"
+    );
+
+    if (
+      activeDropdowns.length &&
+      !event.target.closest(".dropdown-container")
+    ) {
+      activeDropdowns.forEach((dropdown) => {
+        dropdown.classList.remove("active");
+      });
+    }
+
+    const activeFilters = document.querySelectorAll(".catalog-filter.active");
+
+    if (activeFilters.length && !event.target.closest(".catalog-filter")) {
+      activeFilters.forEach((filter) => {
+        filter.classList.remove("active");
+      });
+    }
+  });
 });
