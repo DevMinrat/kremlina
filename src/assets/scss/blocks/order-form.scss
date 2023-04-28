@@ -1,0 +1,55 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  width: 56rem;
+
+  padding: 6rem 9rem;
+
+  background: #ffffff;
+  border-radius: 2rem;
+
+  .checkbox-descr {
+    color: #998485;
+  }
+
+  .order-form__sbm-btn {
+    width: 100%;
+  }
+}
+.order-form__title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  text-align: center;
+}
+
+.custom-input {
+  padding: 1rem 1.6rem;
+
+  border: 0.1rem solid #beb0b0;
+  border-radius: 1rem;
+
+  &::placeholder {
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: #beb0b0;
+  }
+}
+.custom-textarea {
+  height: 16rem;
+
+  padding: 1rem 1.6rem;
+
+  border: 0.1rem solid #beb0b0;
+  border-radius: 1rem;
+
+  &::placeholder {
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: #beb0b0;
+  }
+}
