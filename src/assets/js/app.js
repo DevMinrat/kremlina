@@ -322,4 +322,44 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  // Получаем элементы, с которыми работаем
+  const coopBtn = document.querySelector(".coop-info__btn");
+  const coopRadios = document.querySelectorAll(
+    ".custom-radio[name='coop-radio']"
+  );
+  const coopPanes = document.querySelectorAll(`.coop-info__pane`);
+  const coopTitle = document.querySelector(".coop-info__title");
+  const coopVars = document.querySelector(".coop-info__vars");
+  let coopFirstStep = true;
+
+  if (coopTitle) {
+    coopBtn.addEventListener("click", function () {
+      const selectedRadioIndex = Array.from(coopRadios).findIndex(
+        (radio) => radio.checked
+      );
+      if (selectedRadioIndex >= 0) {
+        coopPanes[selectedRadioIndex].style.display = "block";
+        toggleCoopVars(coopFirstStep);
+      }
+    });
+  }
+
+  function toggleCoopVars(step) {
+    if (step) {
+      coopBtn.innerText = "назад";
+      coopTitle.style.display = "none";
+      coopVars.style.display = "none";
+
+      coopFirstStep = false;
+    } else {
+      coopBtn.innerText = "далее";
+      coopTitle.style.display = "block";
+      coopVars.style.display = "flex";
+
+      coopFirstStep = true;
+
+      coopPanes.forEach((el) => (el.style.display = "none"));
+    }
+  }
 });

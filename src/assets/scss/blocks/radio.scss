@@ -1,0 +1,43 @@
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  cursor: pointer;
+
+  &:hover {
+    .radio-cirlce {
+      border-color: $primary;
+    }
+  }
+}
+.custom-radio {
+  position: absolute;
+  z-index: -10;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+
+  &:checked + .radio-cirlce {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='12' rx='6' fill='%23C4161D'/%3E%3C/svg%3E%0A");
+
+    background-size: 1.2rem 1.2rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-color: $primary;
+  }
+}
+.radio-cirlce {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  padding: 0.2rem;
+
+  border: 0.1rem solid #beb0b0;
+  border-radius: 50%;
+}
+.radio-descr {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: $black;
+}

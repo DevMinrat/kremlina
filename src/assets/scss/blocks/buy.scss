@@ -1,0 +1,94 @@
+.buy-title {
+  margin-bottom: 6rem;
+}
+
+.buy__inner {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.buy-img {
+  width: 100%;
+  max-width: 41rem;
+}
+.buy-item {
+  position: relative;
+
+  width: 41rem;
+
+  padding: 4rem;
+  margin-top: 4.3rem;
+
+  border: 0.2rem solid #e5dfe0;
+  border-radius: 2rem;
+}
+.buy-item__title {
+  position: absolute;
+  left: 2rem;
+  top: -4rem;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: #c4161d;
+
+  padding: 1rem 2rem;
+
+  background: white;
+}
+.buy-item__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  li {
+    position: relative;
+
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    padding-left: 2.8rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      width: 0.8rem;
+      height: 0.8rem;
+
+      background: $primary;
+      border-radius: 50%;
+    }
+  }
+
+  & + p {
+    margin-top: 1.2rem;
+  }
+}
+.buy-descr {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+
+  max-width: 86rem;
+
+  font-size: 1.6rem;
+
+  p + p {
+    margin-top: 2rem;
+  }
+
+  a {
+    color: $primary;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
