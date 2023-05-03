@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // header functional
 
   const header = document.querySelector(".header");
+  const burger = document.querySelector(".burger-menu");
+  const menu = document.querySelector(".menu");
+  const headerLinks = document.querySelector(".header-links__main");
   let scrollPrev = 0;
 
   if (header) {
@@ -32,14 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.add("top");
     }
 
-    const burger = document.querySelector(".burger-menu");
-    const menu = document.querySelector(".menu");
-
     burger.addEventListener("click", () => {
       burger.classList.toggle("active");
       menu.classList.toggle("active");
 
-      if (burger.classList.contains("active") && window.innerWidth <= 500) {
+      if (window.innerWidth <= 1024) {
+        headerLinks.classList.toggle("active");
+      }
+
+      if (burger.classList.contains("active")) {
         scrollLock.disablePageScroll();
       } else {
         scrollLock.enablePageScroll();
@@ -194,10 +198,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // accordeon
 
   class Accordion {
-    constructor(element) {
+    constructor(element, heading, content) {
       this.element = element;
-      this.button = this.element.querySelector(".accordion__heading");
-      this.content = this.element.querySelector(".accordion__content");
+      this.heading = heading;
+      this.content = content;
+      this.button = this.element.querySelector(heading);
+      this.content = this.element.querySelector(content);
       this.button.addEventListener("click", (evt) => {
         evt.preventDefault();
         if (this.element.classList.contains("active")) {
@@ -217,9 +223,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const accordions = document.querySelectorAll(".accordion");
   const accordionsSub = document.querySelectorAll(".accordion-sub");
   if (accordions.length) {
-    accordions.forEach((accordion) => new Accordion(accordion));
-    accordionsSub.forEach((accordionsSub) => new Accordion(accordionsSub));
+    accordions.forEach(
+      (accordion) =>
+        new Accordion(accordion, ".accordion__heading", ".accordion__content")
+    );
+    accordionsSub.forEach(
+      (accordionsSub) =>
+        new Accordion(
+          accordionsSub,
+          ".accordion__heading",
+          ".accordion__content"
+        )
+    );
   }
+
+  const menuCat = document.querySelectorAll(".menu-cat");
+  menuCat.forEach(
+    (elem) =>
+      new Accordion(
+        elem,
+        ".menu-cat__title",
+        ".menu-cat__links"
+      )
+  );
 
   // filter dropdown
 
@@ -320,6 +346,16 @@ document.addEventListener("DOMContentLoaded", () => {
       activeFilters.forEach((filter) => {
         filter.classList.remove("active");
       });
+    }
+
+    if (
+      window.innerWidth > 1024 &&
+      burger.classList.contains("active") &&
+      !event.target.closest(".burger-menu")
+    ) {
+      burger.classList.remove("active");
+      menu.classList.remove("active");
+      scrollLock.enablePageScroll();
     }
   });
 

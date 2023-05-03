@@ -6,17 +6,29 @@
   display: flex;
   align-items: flex-start;
   gap: 8rem;
+
+  @include breakpoint($xl-bp) {
+    gap: 4rem;
+  }
 }
 
 .benefits-main__img {
   width: 100%;
   max-width: 82rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: 60rem;
+  }
 }
 
 .benefits-main__content {
   display: flex;
   flex-wrap: wrap;
   gap: 0 4rem;
+
+  @include breakpoint($xl-bp) {
+    gap: 0 2rem;
+  }
 }
 .benefits-main__item {
   position: relative;
@@ -28,11 +40,23 @@
   border: 0.2rem solid #e5dfe0;
   border-radius: 2rem;
 
+  @include breakpoint($xl-bp) {
+    width: 48%;
+  }
+
   &:nth-child(even) {
     margin-top: 12rem;
+
+    @include breakpoint($xl-bp) {
+      margin-top: 7rem;
+    }
   }
   &:nth-child(odd) {
     margin-top: -1rem;
+
+    @include breakpoint($xl-bp) {
+      margin-top: 0;
+    }
   }
 }
 .benefits-main__item-title {

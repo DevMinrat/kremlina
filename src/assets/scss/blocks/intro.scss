@@ -83,6 +83,10 @@
   width: 64rem;
   height: 64rem;
 
+  @include breakpoint($xl-bp) {
+    left: 59%;
+  }
+
   .hollow-circle {
     position: absolute;
     left: 50%;

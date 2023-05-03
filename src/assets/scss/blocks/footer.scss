@@ -47,6 +47,10 @@
   &:nth-child(1) {
     width: 100%;
     max-width: 77.5rem;
+
+    @include breakpoint($xl-bp) {
+      max-width: 58rem;
+    }
   }
 }
 .footer-nav__column-title {
@@ -64,6 +68,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 17.4rem;
+
+  @include breakpoint($xl-bp) {
+    gap: 2rem;
+  }
 
   span {
     width: 100%;
@@ -142,6 +150,10 @@ a.footer-tel {
   gap: 1rem;
 
   margin-right: 27rem;
+
+  @include breakpoint($xl-bp) {
+    margin-right: 0;
+  }
 
   p,
   a {

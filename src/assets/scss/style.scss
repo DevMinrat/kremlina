@@ -145,12 +145,20 @@ a {
 
   background: $primary;
   border-radius: 0.4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 }
 
 .flag-item {
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+  }
 }
 
 .hide {
