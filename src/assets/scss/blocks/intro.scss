@@ -3,6 +3,10 @@
 
   background: #b58fe3;
 
+  @include breakpoint($sm-bp) {
+    height: 70rem;
+  }
+
   .container {
     height: 100%;
   }
@@ -23,6 +27,10 @@
     display: flex;
     align-items: center;
     gap: 1.6rem;
+
+    @include breakpoint($sm-bp) {
+      top: 2rem;
+    }
 
     .swiper-pagination-bullet {
       width: 1rem;
@@ -53,6 +61,10 @@
     height: 0.2rem;
 
     background: #ddccf2;
+
+    @include breakpoint($lg-bp) {
+      display: none;
+    }
   }
 
   &::after {
@@ -66,6 +78,10 @@
     height: 0.2rem;
 
     background: #ddccf2;
+
+    @include breakpoint($lg-bp) {
+      display: none;
+    }
   }
 }
 
@@ -86,6 +102,21 @@
   @include breakpoint($xl-bp) {
     left: 59%;
   }
+  @include breakpoint($lg-bp) {
+    top: 62%;
+    left: 50%;
+  }
+  @include breakpoint($sm-bp) {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+
+    width: 34rem;
+    height: 34rem;
+
+    margin-bottom: 3rem;
+  }
 
   .hollow-circle {
     position: absolute;
@@ -99,6 +130,20 @@
 
     border: 0.2rem solid #ddccf2;
     border-radius: 50%;
+
+    @include breakpoint($lg-bp) {
+      width: 50rem;
+      height: 50rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      width: 34rem;
+      height: 34rem;
+
+      left: 0;
+      top: 0;
+      transform: none;
+    }
   }
   .filled-circle {
     position: absolute;
@@ -111,6 +156,16 @@
     height: 56rem;
     background: #ddccf2;
     border-radius: 50%;
+
+    @include breakpoint($lg-bp) {
+      width: 43rem;
+      height: 43rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      width: 30rem;
+      height: 30rem;
+    }
   }
 
   .is-slide__main-img {
@@ -120,6 +175,14 @@
 
     width: 100%;
     max-width: 43.7rem;
+
+    @include breakpoint($lg-bp) {
+      max-width: 33rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      width: 22rem;
+    }
   }
 
   .is-almond {
@@ -139,6 +202,12 @@
     left: -7%;
     width: 19rem;
   }
+
+  .anim-fruit {
+    @include breakpoint($lg-bp) {
+      display: none;
+    }
+  }
 }
 
 .intro-title {
@@ -152,6 +221,18 @@
 
   margin-bottom: 4rem;
   padding-top: 6rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 3.7rem;
+
+    padding-top: 4rem;
+    margin-bottom: 3rem;
+  }
 }
 .intro-subtitle {
   max-width: 47rem;
@@ -159,10 +240,20 @@
   font-size: 2.4rem;
   line-height: 120%;
   color: #ffffff;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+
+    margin-bottom: 3rem;
+  }
 }
 
 .intro-slider__first-buy {
   position: absolute;
   right: 0;
   bottom: 7%;
+
+  @include breakpoint($sm-bp) {
+    position: static;
+  }
 }

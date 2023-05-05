@@ -4,6 +4,10 @@
   padding: 8rem 0;
 
   background: #4c3b3c;
+
+  @include breakpoint($lg-bp) {
+    padding: 4rem 0;
+  }
 }
 
 .footer__header {
@@ -15,11 +19,26 @@
   margin-bottom: 8rem;
 
   border-bottom: 0.1rem solid #998485;
+
+  @include breakpoint($lg-bp) {
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-wrap: wrap;
+
+    gap: 4rem;
+  }
 }
 .footer__logo {
   display: flex;
   align-items: flex-end;
   gap: 6.5rem;
+
+  @include breakpoint($sm-bp) {
+    gap: 3rem;
+  }
 }
 .footer__logo-img {
   width: 10.5rem;
@@ -30,9 +49,22 @@
   line-height: 120%;
   text-transform: uppercase;
   color: #ffffff;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 }
 .footer-buy {
   margin-right: 22rem;
+
+  @include breakpoint($lg-bp) {
+    margin-right: 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .footer-nav {
@@ -41,6 +73,23 @@
   gap: 12rem;
 
   margin-bottom: 11rem;
+
+  @include breakpoint($lg-bp) {
+    gap: 0;
+
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+
+    border-bottom: 0.1rem solid #998485;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+
+    padding-bottom: 0;
+
+    border-bottom: none;
+  }
 }
 
 .footer-nav__column {
@@ -50,6 +99,10 @@
 
     @include breakpoint($xl-bp) {
       max-width: 58rem;
+    }
+
+    @include breakpoint($lg-bp) {
+      display: none;
     }
   }
 }
@@ -63,6 +116,10 @@
   color: #ffffff;
 
   margin-bottom: 3rem;
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
 }
 .footer-nav__column-links {
   display: flex;
@@ -71,6 +128,10 @@
 
   @include breakpoint($xl-bp) {
     gap: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 3rem;
   }
 
   span {
@@ -92,6 +153,14 @@
     }
   }
 
+  .fl-mob {
+    display: none;
+
+    @include breakpoint($lg-bp) {
+      display: block;
+    }
+  }
+
   .flag-new {
     font-size: 1rem;
     line-height: 1.5;
@@ -104,6 +173,18 @@
   flex-direction: column;
   gap: 2rem;
   flex-basis: 80rem;
+
+  @include breakpoint($lg-bp) {
+    flex-basis: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem 1.6rem;
+
+    margin-top: 4rem;
+    padding-top: 4rem;
+
+    border-top: 0.1rem solid #998485;
+  }
 
   span,
   a {
@@ -124,12 +205,24 @@ a.footer-tel {
   line-height: 120%;
   text-transform: uppercase;
   color: #ffffff;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+
+    margin-right: 4rem;
+  }
 }
 
 .footer-bottom {
   display: flex;
   align-items: flex-end;
   gap: 27.5rem;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
 }
 .footer-social {
   display: flex;
@@ -169,6 +262,20 @@ a.footer-tel {
   gap: 2rem;
 
   margin-top: -13rem;
+
+  @include breakpoint($lg-bp) {
+    margin-top: -20rem;
+    margin-left: auto;
+  }
+
+  @include breakpoint($sm-bp) {
+    position: absolute;
+    right: 1.6rem;
+    top: 30.4%;
+
+    margin-top: 0;
+    margin-left: unset;
+  }
 
   a {
     font-family: "Nunito";

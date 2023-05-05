@@ -4,7 +4,10 @@
             <div class="footer__inner">
                 <div class="footer__header">
                     <div class="footer__logo">
-                        <img class="footer__logo-img" src="assets/images/logo-column.svg" alt="">
+                        <picture>
+                            <source srcset="assets/images/logo-mob.svg" media="(max-width: 500px)">
+                            <img class="footer__logo-img" src="assets/images/logo-column.svg" alt="">
+                        </picture>
                         <p class="footer__logo-descr">Кондитерская фабрика</p>
                     </div>
                     <a class="footer-buy hollow-btn white" href="#">где купить?</a>
@@ -31,6 +34,7 @@
                     <div class="footer-nav__column">
                         <h3 class="footer-nav__column-title">Меню</h3>
                         <div class="footer-nav__column-links">
+                            <span class="fl-mob"><a href="#">Наша продукция</a></span>
                             <span><a href="#">О компании</a></span>
                             <span><a href="#">Сотрудничество</a></span>
                             <span><a href="#">Контакты</a></span>

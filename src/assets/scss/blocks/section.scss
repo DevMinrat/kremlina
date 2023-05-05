@@ -1,5 +1,9 @@
 .section {
   margin: 22rem 0;
+
+  @include breakpoint($lg-bp) {
+    margin: 10rem 0;
+  }
 }
 
 .section-title {
@@ -10,4 +14,10 @@
   color: $black;
 
   margin-bottom: 6rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 3rem;
+
+    margin-bottom: 4rem;
+  }
 }

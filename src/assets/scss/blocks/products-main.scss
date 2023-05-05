@@ -4,6 +4,10 @@
   &.rolled {
     .products-main__inner {
       max-height: 300rem;
+
+      @include breakpoint($lg-bp) {
+        max-height: 600rem;
+      }
     }
   }
 }
@@ -20,6 +24,9 @@
   @include breakpoint($xl-bp) {
     gap: 2.7rem;
   }
+  @include breakpoint($sm-bp) {
+    max-height: 165rem;
+  }
 }
 .pm-cat {
   position: relative;
@@ -35,6 +42,14 @@
   border-radius: 2rem;
 
   cursor: url(../images/main-products/cursor.svg) 55 55, pointer;
+
+  @include breakpoint($sm-bp) {
+    justify-content: flex-start;
+
+    min-height: 26rem;
+
+    padding: 2rem;
+  }
 
   &:hover {
     &::after {
@@ -63,6 +78,12 @@
   img {
     width: 100%;
     max-width: 27.4rem;
+
+    @include breakpoint($sm-bp) {
+      order: 2;
+
+      max-width: 19rem;
+    }
   }
 
   &:nth-child(3n + 1) {
@@ -79,6 +100,10 @@
     }
     img {
       max-width: 31.9rem;
+
+      @include breakpoint($sm-bp) {
+        max-width: 19rem;
+      }
     }
   }
   &:nth-child(2) {
@@ -88,11 +113,19 @@
       width: 49%;
     }
 
+    @include breakpoint($lg-bp) {
+      width: 100%;
+    }
+
     .pm-cat__tags {
       max-width: 24rem;
     }
     img {
       max-width: 27.7rem;
+
+      @include breakpoint($sm-bp) {
+        max-width: 19rem;
+      }
     }
   }
   &:nth-child(3) {
@@ -100,6 +133,10 @@
 
     @include breakpoint($xl-bp) {
       width: 49%;
+    }
+
+    @include breakpoint($lg-bp) {
+      width: 100%;
     }
 
     .pm-cat__tags {
@@ -117,6 +154,10 @@
     img {
       width: 100%;
       max-width: 32.1rem;
+
+      @include breakpoint($sm-bp) {
+        max-width: 19rem;
+      }
     }
   }
   &:nth-child(5) {
@@ -126,6 +167,10 @@
 
     @include breakpoint($xl-bp) {
       width: 49%;
+    }
+
+    @include breakpoint($lg-bp) {
+      width: 100%;
     }
 
     .pm-cat__tags {
@@ -141,8 +186,16 @@
       width: 49%;
     }
 
+    @include breakpoint($lg-bp) {
+      width: 100%;
+    }
+
     img {
       margin-left: -4rem;
+
+      @include breakpoint($sm-bp) {
+        max-width: 19rem;
+      }
     }
 
     .pm-cat__tags {
@@ -152,6 +205,10 @@
   &:nth-child(7) {
     @include breakpoint($xl-bp) {
       width: 53%;
+    }
+
+    @include breakpoint($lg-bp) {
+      width: 100%;
     }
 
     padding-right: 2rem;
@@ -169,6 +226,10 @@
       width: 45%;
     }
 
+    @include breakpoint($lg-bp) {
+      width: 100%;
+    }
+
     .pm-cat__tags {
       max-width: 37.5rem;
     }
@@ -180,12 +241,22 @@
   font-size: 3.2rem;
   line-height: 120%;
   margin-bottom: 2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
 }
 
 .pm-cat__content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 .pm-cat__tags {
@@ -195,6 +266,11 @@
   gap: 2rem;
 
   width: 100%;
+
+  @include breakpoint($sm-bp) {
+    align-self: flex-start;
+    gap: 1rem;
+  }
 }
 
 .pm-cat__tags-item {
@@ -205,11 +281,26 @@
 
   border: 0.1rem solid #4c3b3c;
   border-radius: 1rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 }
 
 .products-main__show-all {
   display: block;
   margin: 8rem auto 0;
+
+  @include breakpoint($lg-bp) {
+    margin: 5rem auto 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 3rem auto 0;
+  }
 }
 
 .products-leaf {
