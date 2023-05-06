@@ -1,4 +1,6 @@
 .intro {
+  position: relative;
+
   height: 86rem;
 
   background: #b58fe3;
@@ -44,6 +46,10 @@
         background: #fff;
       }
     }
+  }
+
+  .swiper-slide-active.swiper-slide {
+    z-index: 22;
   }
 }
 
@@ -255,5 +261,38 @@
 
   @include breakpoint($sm-bp) {
     position: static;
+  }
+}
+
+.intro-slider__price-btn {
+  display: none;
+
+  position: absolute;
+
+  right: 0rem;
+  top: 88%;
+
+  height: 4.6rem;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  padding: 1.4rem 1.8rem;
+
+  background: #c4161d;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.3s linear;
+
+  @include breakpoint($sm-bp) {
+    display: block;
   }
 }

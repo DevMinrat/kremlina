@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   //= components/scroll-lock.js
   //= components/sliders.js
+  //= components/animation.js
 
   // header functional
 

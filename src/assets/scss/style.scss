@@ -109,7 +109,7 @@ a {
 .fixed-price-btn {
   position: fixed;
   right: -8.6rem;
-  top: 50%;
+  top: 30%;
   z-index: 30;
 
   font-family: "Nunito";
@@ -129,6 +129,54 @@ a {
   border: none;
   outline: none;
   cursor: pointer;
+
+  transition: all 0.3s linear;
+
+  svg {
+    display: none;
+
+    width: 3.2rem;
+    height: 3.2rem;
+
+    fill: none;
+    stroke: white;
+  }
+
+  @include breakpoint($sm-bp) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: none;
+
+    right: 4%;
+    bottom: -10%;
+    top: unset;
+
+    width: 5.6rem;
+    height: 5.6rem;
+
+    padding: 1.2rem;
+
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    svg {
+      display: block;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  &.active {
+    position: fixed;
+  }
+}
+
+.price-btn--mob {
+  display: none;
 }
 
 .flag-new {
