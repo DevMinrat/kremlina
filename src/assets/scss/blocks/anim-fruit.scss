@@ -4,7 +4,32 @@
 
   width: 26rem;
 
+  // animation: float 2s ease-in-out infinite;
+
   @include breakpoint($lg-bp) {
     display: none;
+  }
+}
+
+@keyframes float {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 2rem;
+    left: 2rem;
+  }
+  50% {
+    top: -1rem;
+    left: 4rem;
+  }
+  75% {
+    top: 2rem;
+    left: -3rem;
+  }
+  100% {
+    top: 0;
+    left: 0;
   }
 }

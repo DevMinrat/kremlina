@@ -55,40 +55,6 @@
 
 .intro-slider__first {
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 53.5%;
-    z-index: 3;
-
-    width: 53rem;
-    height: 0.2rem;
-
-    background: #ddccf2;
-
-    @include breakpoint($lg-bp) {
-      display: none;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 64%;
-    top: 80.3%;
-    z-index: 3;
-
-    width: 63.6rem;
-    height: 0.2rem;
-
-    background: #ddccf2;
-
-    @include breakpoint($lg-bp) {
-      display: none;
-    }
-  }
 }
 
 .is-slide__content {
@@ -128,7 +94,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    z-index: 1;
+    z-index: 3;
     transform: translate(-50%, -50%);
 
     width: 64rem;
@@ -195,6 +161,7 @@
     transform: rotate(-17deg);
     top: -4%;
     left: 61%;
+
     width: 16rem;
   }
   .is-prunes {
@@ -294,5 +261,36 @@
 
   @include breakpoint($sm-bp) {
     display: block;
+  }
+}
+
+.left-line {
+  position: absolute;
+  left: 0;
+  top: 53.5%;
+  z-index: 3;
+
+  width: 53rem;
+  height: 0.2rem;
+
+  background: #ddccf2;
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+}
+.right-line {
+  position: absolute;
+  right: 0%;
+  top: 80.3%;
+  z-index: 3;
+
+  width: 63.6rem;
+  height: 0.2rem;
+
+  background: #ddccf2;
+
+  @include breakpoint($lg-bp) {
+    display: none;
   }
 }
