@@ -220,3 +220,35 @@ a {
 .show {
   display: block;
 }
+
+.read-more-btn {
+  display: none;
+  cursor: pointer;
+
+  width: max-content;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: $primary;
+
+  border-bottom: 0.1rem solid $primary;
+
+  @include breakpoint($sm-bp) {
+    display: block;
+
+    & ~ * {
+      display: none;
+    }
+  }
+
+  &.active {
+    display: none;
+
+    & ~ * {
+      display: block;
+    }
+  }
+}

@@ -17,6 +17,26 @@
   max-height: 63rem;
 
   transition: all 0.7s ease-out;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    flex-wrap: unset;
+
+    overflow: unset;
+
+    max-height: unset;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 3rem;
+  }
+
+  .sertif-item--desct {
+    display: none;
+    @include breakpoint($lg-bp) {
+      display: block;
+    }
+  }
 }
 .sertif-item {
   width: 41rem;
@@ -25,7 +45,23 @@
     img {
       transform: scale(1.13);
       transform-origin: top right;
+
+      @include breakpoint($lg-bp) {
+        transform: none;
+      }
     }
+  }
+  &:nth-child(2) {
+    img {
+      @include breakpoint($lg-bp) {
+        transform: scale(1.13);
+        transform-origin: top right;
+      }
+    }
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 18rem;
   }
 
   img {
@@ -39,6 +75,14 @@
 
   border: 0.2rem solid #e5dfe0;
   border-radius: 2rem;
+
+  @include breakpoint($lg-bp) {
+    width: 100%;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 1.6rem;
+  }
 }
 .sertif-item__title {
   position: absolute;
@@ -56,6 +100,14 @@
 
   background: #ffffff;
   border-radius: 1rem;
+
+  @include breakpoint($sm-bp) {
+    top: -2.7rem;
+
+    font-size: 1.8rem;
+
+    padding: 1rem;
+  }
 }
 .sertif-item__descr {
   line-height: 1.5;
@@ -68,4 +120,29 @@
 .sertif__show-all {
   display: block;
   margin: 0 auto;
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+}
+
+.sertif__slider {
+  .swiper-wrapper {
+    gap: 4rem;
+    flex-wrap: wrap;
+
+    height: auto;
+    box-sizing: border-box;
+
+    @include breakpoint($lg-bp) {
+      flex-wrap: unset;
+      gap: unset;
+    }
+  }
+
+  .sertif-item--main {
+    @include breakpoint($lg-bp) {
+      display: none;
+    }
+  }
 }

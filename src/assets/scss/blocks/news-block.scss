@@ -13,10 +13,31 @@
   border-radius: 2rem;
 
   overflow: hidden;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+
+    max-width: 32rem;
+  }
 }
 .news-block__item-img {
   width: 100%;
   max-width: 99rem;
+
+  border-radius: 2rem 0 0 2rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: 80rem;
+    object-fit: cover;
+  }
+  @include breakpoint($lg-bp) {
+    max-width: 45rem;
+  }
+  @include breakpoint($sm-bp) {
+    height: 24.5rem;
+
+    border-radius: 2rem 2rem 0 0;
+  }
 }
 .news-block__item-content {
   display: flex;
@@ -24,6 +45,14 @@
   height: auto;
 
   padding: 6rem 11rem 6rem 6rem;
+
+  @include breakpoint($lg-bp) {
+    padding: 3rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 2rem;
+  }
 }
 .news-block__item-title {
   font-family: "Nunito";
@@ -32,11 +61,30 @@
   line-height: 120%;
 
   margin-bottom: 6rem;
+
+  @include breakpoint($lg-bp) {
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
+}
+
+.news-block__item-descr {
+  line-height: 1.5;
 }
 .news-block__item-date {
   font-size: 1.6rem;
 
   margin-top: auto;
+
+  @include breakpoint($lg-bp) {
+    margin-top: 2rem;
+  }
 }
 .swiper-navigation {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
 }

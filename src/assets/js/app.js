@@ -240,12 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuCat = document.querySelectorAll(".menu-cat");
   menuCat.forEach(
-    (elem) =>
-      new Accordion(
-        elem,
-        ".menu-cat__title",
-        ".menu-cat__links"
-      )
+    (elem) => new Accordion(elem, ".menu-cat__title", ".menu-cat__links")
   );
 
   // filter dropdown
@@ -398,5 +393,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       coopPanes.forEach((el) => (el.style.display = "none"));
     }
+  }
+
+  const readMoreBtn = document.querySelectorAll(".read-more-btn");
+
+  if (readMoreBtn.length) {
+    readMoreBtn.forEach((el) => {
+      el.addEventListener("click", () => {
+        el.classList.add("active");
+      });
+    });
   }
 });

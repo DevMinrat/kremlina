@@ -10,9 +10,18 @@
   display: flex;
   align-items: flex-start;
   gap: 14rem;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 .achievements__content {
   width: 71.1rem;
+
+  @include breakpoint($sm-bp) {
+    width: auto;
+  }
 
   p + p {
     margin-top: 2rem;
@@ -45,6 +54,10 @@
 
   ul li + li {
     margin-top: 2.7rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 1rem;
+    }
   }
 }
 .achievements-slider {
@@ -56,9 +69,23 @@
 
   overflow: hidden;
 
+  @include breakpoint($xl-bp) {
+    width: 63rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    position: static;
+
+    width: 100%;
+  }
+
   .swiper-navigation {
     top: 0.5rem;
     right: 3rem;
+
+    @include breakpoint($lg-bp) {
+      display: none;
+    }
   }
 }
 
@@ -70,6 +97,12 @@
   color: $primary;
 
   margin-bottom: 4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+  }
 }
 
 .achievements-slider__item {
@@ -78,6 +111,16 @@
 
   border-radius: 2rem;
   overflow: hidden;
+
+  @include breakpoint($xl-bp) {
+    width: 60rem;
+    height: 40rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 32rem;
+    height: 22.6rem;
+  }
 
   img {
     width: 100%;

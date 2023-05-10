@@ -69,14 +69,16 @@ title: О компании
                         ни один век, прежде чем английские ученые создали инновационную технологию приготовления
                         шоколада.
                     </p>
+                    <p class="read-more-btn">читать далее</p>
                     <p>Безусловно, кондитерские изделия кондитерской фабрики «Кремлина» заметно отличаются от первых
                         шоколадных конфет, но, тем не менее, можно найти сходство - оригинальный вкус. Что самое главное
                         в кондитерском изделии? Его начинка! Именно начинка позволяет главным образом разнообразить
                         конфетный ассортимент. Можно фантазировать и компоновать, смешивать и пробовать.</p>
                 </div>
-                <a class="filled-btn" href="#">смотреть ассортимент</a>
+                <a class="about__link filled-btn" href="#">смотреть ассортимент</a>
             </div>
             <img class="about__img" src="assets/images/about/about-img.jpg" alt="">
+            <a class="about__link--mob filled-btn" href="#">смотреть ассортимент</a>
         </div>
     </div>
 
@@ -86,18 +88,22 @@ title: О компании
 <div class="about-info section">
     <div class="container">
         <div class="about-info__inner">
-            <div class="about-info__item" style="background: #BBD1FB;">
-                <img class="about-info__item-img" src="assets/images/about/about-info-img-1.png" alt="">
-                <p class="about-info__item-descr">Наша основная специализация — фрукты и орехи в шоколаде.</p>
-            </div>
-            <div class="about-info__item" style="background: #FEDFA6;">
-                <img class="about-info__item-img" src="assets/images/about/about-info-img-2.png" alt="">
-                <p class="about-info__item-descr">Принцип «натуральности» — основополагающий для компании «Кремлина»</p>
-            </div>
-            <div class="about-info__item" style="background: #FEC6A6;">
-                <img class="about-info__item-img" src="assets/images/about/about-info-img-3.png" alt="">
-                <p class="about-info__item-descr">Для производства своих изделий мы используем только ингредиенты класса
-                    «Экстра» </p>
+            <div class="swiper-wrapper">
+                <div class="about-info__item swiper-slide" style="background: #BBD1FB;">
+                    <img class="about-info__item-img" src="assets/images/about/about-info-img-1.png" alt="">
+                    <p class="about-info__item-descr">Наша основная специализация — фрукты и орехи в шоколаде.</p>
+                </div>
+                <div class="about-info__item swiper-slide" style="background: #FEDFA6;">
+                    <img class="about-info__item-img" src="assets/images/about/about-info-img-2.png" alt="">
+                    <p class="about-info__item-descr">Принцип «натуральности» — основополагающий для компании «Кремлина»
+                    </p>
+                </div>
+                <div class="about-info__item swiper-slide" style="background: #FEC6A6;">
+                    <img class="about-info__item-img" src="assets/images/about/about-info-img-3.png" alt="">
+                    <p class="about-info__item-descr">Для производства своих изделий мы используем только ингредиенты
+                        класса
+                        «Экстра» </p>
+                </div>
             </div>
         </div>
     </div>
@@ -201,6 +207,7 @@ title: О компании
                 <p>Кондитерская фабрика «КРЕМЛИНА» гордится своими достижениями и благодарна потребителям наших вкусных
                     конфет, а так же партнерам компании. Компания ведет активную благотворительную деятельность, помогая
                     многодетным семьям, детям сиротам, ветеранам войны и инвалидам</p>
+                <p class="read-more-btn">читать далее</p>
                 <p>Мы помогали:</p>
                 <ul>
                     <li>Московская организация ветеранов ВОВ (военное строительство)</li>
@@ -245,7 +252,7 @@ title: О компании
 <section class="sertif section">
     <div class="container">
         <div class="sertif__inner">
-            <div class="sertif-item sertif-item--main">
+            <div class="sertif-item sertif-item--main sertif-item--desct">
                 <h2 class="sertif-item__title">Сертификаты</h2>
                 <div class="sertif-item__descr">
                     <p>Также продукция «КРЕМЛИНЫ» получила множество наград и сертификатов. Наиболее ценные для нас
@@ -255,32 +262,49 @@ title: О компании
                         и ПродЭкспо.</p>
                 </div>
             </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-1.png" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-2.jpg" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-3.jpg" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-4.jpg" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-5.jpg" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-6.jpg" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-7.jpg" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-8.jpg" alt="">
-            </div>
-            <div class="sertif-item">
-                <img src="assets/images/sertif/sertif-9.jpg" alt="">
+            <div class="sertif__slider">
+                <div class="swiper-wrapper">
+                    <div class="sertif-item sertif-item--main">
+                        <h2 class="sertif-item__title">Сертификаты</h2>
+                        <div class="sertif-item__descr">
+                            <p>Также продукция «КРЕМЛИНЫ» получила множество наград и сертификатов. Наиболее ценные
+                                для нас
+                                сертификаты от сайта Отзовик, которые полностью отображают отношение потребителей к
+                                нашим
+                                конфетам.</p>
+                            <p>Активность компании ЗАО «КОНКОРД» отражена участием в выставках международного уровня:
+                                WorldFood
+                                и ПродЭкспо.</p>
+                        </div>
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-1.png" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-2.jpg" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-3.jpg" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-4.jpg" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-5.jpg" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-6.jpg" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-7.jpg" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-8.jpg" alt="">
+                    </div>
+                    <div class="sertif-item swiper-slide">
+                        <img src="assets/images/sertif/sertif-9.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         <button class="sertif__show-all hollow-btn">Показать все сертификаты</button>
