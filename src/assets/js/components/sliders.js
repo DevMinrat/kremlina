@@ -110,5 +110,7 @@ if (document.querySelector(".sertif__slider")) {
 }
 
 window.addEventListener("resize", () => {
-  toggleSertifSlider();
+  if (document.querySelector(".sertif__slider")) {
+    toggleSertifSlider();
+  }
 });

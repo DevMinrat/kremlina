@@ -1,5 +1,14 @@
-.buy-title {
+h1.buy-title {
+  font-size: 5.8rem;
+
   margin-bottom: 6rem;
+
+  @include breakpoint($xl-bp) {
+    font-size: 5rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 3rem;
+  }
 }
 
 .buy__inner {
@@ -8,10 +17,28 @@
   display: flex;
   align-items: flex-start;
   gap: 4rem;
+
+  @include breakpoint($xl-bp) {
+    gap: 2rem;
+  }
+  @include breakpoint($lg-bp) {
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
 }
 .buy-img {
   width: 100%;
   max-width: 41rem;
+
+  @include breakpoint($lg-bp) {
+    width: 51%;
+  }
+
+  @include breakpoint($sm-bp) {
+    order: 5;
+
+    width: 100%;
+  }
 }
 .buy-item {
   position: relative;
@@ -23,6 +50,17 @@
 
   border: 0.2rem solid #e5dfe0;
   border-radius: 2rem;
+
+  @include breakpoint($lg-bp) {
+    width: 46%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 100%;
+
+    padding: 2rem;
+    margin-top: 0;
+  }
 }
 .buy-item__title {
   position: absolute;
@@ -38,6 +76,13 @@
   padding: 1rem 2rem;
 
   background: white;
+
+  @include breakpoint($xl-bp) {
+    left: 1rem;
+    top: -3rem;
+
+    font-size: 2rem;
+  }
 }
 .buy-item__list {
   display: flex;
@@ -79,6 +124,15 @@
   max-width: 86rem;
 
   font-size: 1.6rem;
+
+  @include breakpoint($xl-bp) {
+    right: 3%;
+
+    max-width: 55rem;
+  }
+  @include breakpoint($lg-bp) {
+    position: static;
+  }
 
   p + p {
     margin-top: 2rem;

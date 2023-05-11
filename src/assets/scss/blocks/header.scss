@@ -42,7 +42,7 @@
 .header__inner {
   display: flex;
   align-items: center;
-  gap: 9.1rem;
+  gap: 9rem;
 
   @include breakpoint($xl-bp) {
     justify-content: space-between;
@@ -124,7 +124,7 @@
 .header-links {
   display: flex;
   align-items: center;
-  gap: 9rem;
+  gap: 8.7rem;
 
   @include breakpoint($sm-bp) {
     width: 100%;
