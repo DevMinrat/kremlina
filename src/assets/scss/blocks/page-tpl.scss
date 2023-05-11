@@ -3,6 +3,14 @@
 
   padding-bottom: 22rem;
 
+  @include breakpoint($lg-bp) {
+    padding-bottom: 12rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+  }
+
   .breadcrumb-wrapper {
     margin-bottom: 6rem;
   }
@@ -13,5 +21,12 @@
     font-size: 8rem;
     line-height: 100%;
     color: $black;
+
+    @include breakpoint($lg-bp) {
+      font-size: 6rem;
+    }
+    @include breakpoint($sm-bp) {
+      font-size: 3.8rem;
+    }
   }
 }

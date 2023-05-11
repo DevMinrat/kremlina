@@ -3,12 +3,19 @@
   flex-direction: column;
   gap: 3rem;
 
-  width: 56rem;
+  width: 100%;
+  max-width: 56rem;
 
   padding: 6rem 9rem;
 
   background: #ffffff;
   border-radius: 2rem;
+
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+
+    padding: 2rem;
+  }
 
   .checkbox-descr {
     color: #998485;
@@ -25,6 +32,10 @@
   font-size: 3.2rem;
   line-height: 120%;
   text-align: center;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
 }
 
 .custom-input {
