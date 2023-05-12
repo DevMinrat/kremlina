@@ -243,6 +243,17 @@ document.addEventListener("DOMContentLoaded", () => {
     (elem) => new Accordion(elem, ".menu-cat__title", ".menu-cat__links")
   );
 
+  // catalog
+
+  const catalogAside = document.querySelector(".catalog-aside");
+  const catalogAsideMobBtn = document.querySelector(".catalog-aside__mob-link");
+
+  if (catalogAside) {
+    catalogAsideMobBtn.addEventListener("click", () => {
+      catalogAside.classList.toggle("active");
+    });
+  }
+
   // filter dropdown
 
   const catalogFilters = document.querySelectorAll(".catalog-filter");
@@ -255,69 +266,94 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const filtersWrapper = document.querySelector(".catalog-filters");
+    const filtersCloseBtn = document.querySelector(".catalog-filters__close");
+    const filtersOpenBtn = document.querySelector(".catalog-filter__mob-btn");
     const filterCheckboxes =
       filtersWrapper.querySelectorAll(".custom-checkbox");
 
-    filterCheckboxes.forEach((checkbox) => {
-      checkbox.addEventListener("change", function () {
-        const text = this.nextElementSibling.nextElementSibling.innerText;
+    if (window.innerWidth > 920) {
+      filterCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          const text = this.nextElementSibling.nextElementSibling.innerText;
 
-        if (this.checked) {
-          const block = createChosenBlock(text);
-          document
-            .querySelector(".catalog-filters__choosed")
-            .appendChild(block);
+          if (this.checked) {
+            const block = createChosenBlock(text);
+            document
+              .querySelector(".catalog-filters__choosed")
+              .appendChild(block);
 
-          const deleteButton = block.querySelector("svg");
-          deleteButton.addEventListener("click", function () {
-            block.remove();
-            checkbox.checked = false;
-            setFilterCount(filterParent);
-          });
-        } else {
-          const chosenBlock = document.querySelector(`div[data-id="${text}"]`);
-          chosenBlock.remove();
-        }
+            const deleteButton = block.querySelector("svg");
+            deleteButton.addEventListener("click", function () {
+              block.remove();
+              checkbox.checked = false;
+              setFilterCount(filterParent);
+            });
+          } else {
+            const chosenBlock = document.querySelector(
+              `div[data-id="${text}"]`
+            );
+            chosenBlock.remove();
+          }
 
-        const filterParent = checkbox.closest(".catalog-filter");
-        setFilterCount(filterParent);
+          const filterParent = checkbox.closest(".catalog-filter");
+          setFilterCount(filterParent);
+        });
       });
-    });
 
-    function createChosenBlock(text) {
-      const block = document.createElement("div");
-      block.classList.add("catalog-filter__chosen");
-      block.setAttribute("data-id", text);
+      function createChosenBlock(text) {
+        const block = document.createElement("div");
+        block.classList.add("catalog-filter__chosen");
+        block.setAttribute("data-id", text);
 
-      const span = document.createElement("span");
-      span.innerText = text;
-      block.appendChild(span);
+        const span = document.createElement("span");
+        span.innerText = text;
+        block.appendChild(span);
 
-      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      svg.innerHTML = '<use xlink:href="#cross"></use>';
+        const svg = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "svg"
+        );
+        svg.innerHTML = '<use xlink:href="#cross"></use>';
 
-      block.appendChild(svg);
+        block.appendChild(svg);
 
-      return block;
+        return block;
+      }
+
+      function setFilterCount(parent) {
+        const checkedItems = parent.querySelectorAll(
+          ".custom-checkbox:checked"
+        );
+        const filerHeading = parent.querySelector(".cf__heading-name");
+
+        if (checkedItems.length > 0) {
+          if (!filerHeading.querySelector(".count")) {
+            const span = document.createElement("span");
+            span.classList.add("count");
+            span.innerText = checkedItems.length;
+
+            filerHeading.appendChild(span);
+          } else {
+            filerHeading.querySelector(".count").innerText =
+              checkedItems.length;
+          }
+        } else {
+          filerHeading.querySelector(".count").remove();
+        }
+      }
     }
 
-    function setFilterCount(parent) {
-      const checkedItems = parent.querySelectorAll(".custom-checkbox:checked");
-      const filerHeading = parent.querySelector(".cf__heading-name");
+    if (window.innerWidth <= 920) {
+      filtersCloseBtn.addEventListener("click", () => {
+        filtersWrapper.classList.remove("active");
 
-      if (checkedItems.length > 0) {
-        if (!filerHeading.querySelector(".count")) {
-          const span = document.createElement("span");
-          span.classList.add("count");
-          span.innerText = checkedItems.length;
+        scrollLock.enablePageScroll();
+      });
+      filtersOpenBtn.addEventListener("click", () => {
+        filtersWrapper.classList.add("active");
 
-          filerHeading.appendChild(span);
-        } else {
-          filerHeading.querySelector(".count").innerText = checkedItems.length;
-        }
-      } else {
-        filerHeading.querySelector(".count").remove();
-      }
+        scrollLock.disablePageScroll();
+      });
     }
   }
 
@@ -342,6 +378,10 @@ document.addEventListener("DOMContentLoaded", () => {
       activeFilters.forEach((filter) => {
         filter.classList.remove("active");
       });
+    }
+
+    if (catalogAside && !event.target.closest(".catalog-aside")) {
+      catalogAside.classList.remove("active");
     }
 
     if (

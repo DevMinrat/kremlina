@@ -2,6 +2,17 @@
   padding-top: 8rem;
   padding-bottom: 22rem;
 
+  @include breakpoint($lg-bp) {
+    position: relative;
+
+    padding-top: 15rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 10rem;
+    padding-top: 13rem;
+  }
+
   .breadcrumb-wrapper {
     margin-bottom: 6rem;
   }
@@ -26,7 +37,62 @@
   border: 0.2rem solid #e5dfe0;
   border-radius: 2rem;
 
+  @include breakpoint($lg-bp) {
+    position: absolute;
+    top: 5rem;
+    z-index: 5;
+
+    max-height: 5rem;
+    overflow: hidden;
+
+    padding: 1.3rem 1.6rem;
+
+    background: white;
+    border-radius: 1rem;
+    border: 0.1rem solid #beb0b0;
+
+    transition: max-height 0.3s linear;
+  }
+
+  @include breakpoint($sm-bp) {
+    top: 3rem;
+
+    max-width: 27.3rem;
+  }
+
+  &.active {
+    max-height: 300rem;
+
+    .catalog-aside__mob-link {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .catalog-aside__mob-link {
+    display: none;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 1.6rem;
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      stroke: $black;
+    }
+
+    @include breakpoint($lg-bp) {
+      display: flex;
+    }
+  }
+
   .accordion {
+    display: flex;
+    flex-direction: column;
+
     &.active {
       .accordion__heading {
         margin-bottom: 1rem;
@@ -154,6 +220,12 @@
   color: $black;
 
   margin-bottom: 4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 2.2rem;
+  }
 }
 
 .catalog__content {
@@ -162,6 +234,12 @@
   gap: 6rem 4rem;
 
   margin-bottom: 8rem;
+
+  @include breakpoint($sm-bp) {
+    gap: 4rem 1.5rem;
+
+    margin-bottom: 6rem;
+  }
 }
 .catalog-item {
   position: relative;
@@ -173,6 +251,16 @@
 
   width: 100%;
   max-width: 41rem;
+
+  @include breakpoint($lg-bp) {
+    width: 47%;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 16.4rem;
+
+    gap: 1rem;
+  }
 
   &:hover {
     .catalog-item__name {
@@ -208,6 +296,15 @@
 
       background: $primary;
       border-radius: 0.4rem;
+
+      @include breakpoint($sm-bp) {
+        top: 1rem;
+        left: 1rem;
+
+        height: 1.9rem;
+
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -216,6 +313,10 @@
 
   background: #fef4f1;
   border-radius: 2rem;
+
+  @include breakpoint($sm-bp) {
+    padding: 1.7rem;
+  }
 }
 .catalog-item__img {
   width: 100%;
@@ -230,6 +331,10 @@
   line-height: 120%;
   text-align: center;
   color: $black;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 }
 
 .catalog__nav {

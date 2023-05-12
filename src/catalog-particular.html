@@ -15,6 +15,12 @@ title: Каталог - Отдельный раздел
     <div class="container">
         <div class="catalog__inner">
             <aside class="catalog-aside">
+                <p class="catalog-aside__mob-link">
+                    <span>Конфеты из сухофруктов</span>
+                    <svg>
+                        <use href="#chevron"></use>
+                    </svg>
+                </p>
                 <a class="catalog-aside__link" href="#">Весь ассортимент</a>
                 <a class="catalog-aside__link" href="#">Новинки <span class="flag-new">NEW</span></a>
                 <div class="accordion active">
@@ -68,6 +74,12 @@ title: Каталог - Отдельный раздел
                 <h1 class="catalog-title">Конфеты из сухофруктов</h1>
                 <div class="catalog-filters">
                     <div class="catalog-filters__inner">
+                        <div class="catalog-filters__header">
+                            <p class="catalog-filters__header-title">Фильтры</p>
+                            <svg class="catalog-filters__close">
+                                <use href="#cross"></use>
+                            </svg>
+                        </div>
                         <div class="catalog-filter cf">
                             <p class="cf__heading">
                                 <span class="cf__heading-name">
@@ -111,6 +123,7 @@ title: Каталог - Отдельный раздел
                                         <span class="checkbox-descr">Кокос</span>
                                     </label>
                                 </div>
+                                <p class="read-more-btn">Показать все</p>
                                 <div class="cf__content-cat">
                                     <p class="content-cat__heading">Ягоды</p>
                                     <label class="checkbox">
@@ -134,6 +147,103 @@ title: Каталог - Отдельный раздел
                                         <span class="checkbox-descr">Смородина</span>
                                     </label>
                                 </div>
+                                <div class="cf__content-cat">
+                                    <p class="content-cat__heading">Ягоды</p>
+                                    <label class="checkbox">
+                                        <input class="custom-checkbox" type="checkbox">
+                                        <span class="checkbox-square"></span>
+                                        <span class="checkbox-descr">Вишня</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="custom-checkbox" type="checkbox">
+                                        <span class="checkbox-square"></span>
+                                        <span class="checkbox-descr">Клубника</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="custom-checkbox" type="checkbox">
+                                        <span class="checkbox-square"></span>
+                                        <span class="checkbox-descr">Малина</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="custom-checkbox" type="checkbox">
+                                        <span class="checkbox-square"></span>
+                                        <span class="checkbox-descr">Смородина</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-filter cf">
+                            <p class="cf__heading">
+                                <span class="cf__heading-name">
+                                    Тип упаковки
+                                </span>
+                                <svg>
+                                    <use href="#chevron"></use>
+                                </svg>
+                            </p>
+                            <div class="cf__content">
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">Пакет</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">Коробка</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">Туба</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">Сувенирная упаковка</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="catalog-filter cf">
+                            <p class="cf__heading">
+                                <span class="cf__heading-name">
+                                    Вес
+                                </span>
+                                <svg>
+                                    <use href="#chevron"></use>
+                                </svg>
+                            </p>
+                            <div class="cf__content">
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">до 200 г</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">200-400 г</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">400-600 г</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">600-800 г</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">800-1000 г</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="custom-checkbox" type="checkbox">
+                                    <span class="checkbox-square"></span>
+                                    <span class="checkbox-descr">более 1 кг</span>
+                                </label>
                             </div>
                         </div>
                         <div class="catalog-filter cf">
@@ -230,4 +340,10 @@ title: Каталог - Отдельный раздел
                 </div>
             </div>
         </div>
+
+        <button class="catalog-filter__mob-btn" type="button">
+            <svg>
+                <use href="#filter"></use>
+            </svg>
+        </button>
     </div>

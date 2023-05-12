@@ -23,6 +23,9 @@ h1.buy-title {
   }
   @include breakpoint($lg-bp) {
     flex-wrap: wrap;
+  }
+
+  @include breakpoint($sm-bp) {
     gap: 6rem;
   }
 }
