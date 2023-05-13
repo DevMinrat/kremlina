@@ -445,3 +445,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+const priceModal = document.querySelector(".price-modal");
+const priceBtns = document.querySelectorAll(".price-btn");
+const priceModalClose = document.querySelector(".price-modal__close");
+
+if (priceModal) {
+  priceBtns.forEach((el) => {
+    el.addEventListener("click", () => {
+      console.log(1);
+      priceModal.classList.add("active");
+    });
+  });
+
+  priceModalClose.addEventListener("click", () => {
+    priceModal.classList.remove("active");
+  });
+
+  priceModal.addEventListener("click", function (event) {
+    if (
+      event.target !== this &&
+      !event.target.classList.contains("price-modal")
+    ) {
+      return;
+    }
+
+    console.log(2);
+    this.classList.remove("active");
+  });
+}
