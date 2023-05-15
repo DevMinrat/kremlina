@@ -51,6 +51,13 @@
   box-shadow: 0px 1rem 1.5rem rgba(76, 59, 60, 0.15);
   border-radius: 2rem 2rem 0px 0px;
 
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    right: 0;
+
+    padding: 2rem;
+  }
+
   .custom-input {
     height: 5rem;
   }
@@ -62,6 +69,10 @@
   line-height: 120%;
   text-align: center;
   color: $black;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.4rem;
+  }
 }
 
 .price-modal__dropdown {

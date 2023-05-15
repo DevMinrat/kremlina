@@ -4,11 +4,10 @@ title: Главная страница
 ---
 
 <section class="intro">
-    <div class="container">
-        <div class="intro-slider">
-            <div class="swiper-wrapper">
-                <div class="intro-slider__first swiper-slide">
-
+    <div class="intro-slider">
+        <div class="swiper-wrapper">
+            <div class="intro-slider__first swiper-slide">
+                <div class="container">
                     <div class="intro-slider__first-header">
                         <h1 class="intro-title">Кремлина — настоящее внутри</h1>
                         <p class="intro-subtitle">Попробуйте сладости из натуральных сухофруктов
@@ -16,9 +15,16 @@ title: Главная страница
                     </div>
                     <div class="is-slide__content">
                         <div class="hollow-circle">
-                            <img class="is-almond anim-fruit" src="assets/images/nuts/almond.png" alt="fruit">
-                            <img class="is-prunes anim-fruit" src="assets/images/fruits/prunes.png" alt="fruit">
-                            <img class="is-cherry anim-fruit" src="assets/images/berries/cherry.png" alt="fruit">
+
+                            <div class="is-almond__wrapper">
+                                <img class="is-almond anim-fruit" src="assets/images/nuts/almond.png" alt="fruit">
+                            </div>
+                            <div class="is-prunes__wrapper">
+                                <img class="is-prunes anim-fruit" src="assets/images/fruits/prunes.png" alt="fruit">
+                            </div>
+                            <div class="is-cherry__wrapper">
+                                <img class="is-cherry anim-fruit" src="assets/images/berries/cherry.png" alt="fruit">
+                            </div>
                         </div>
                         <div class="filled-circle"></div>
                         <img class="is-slide__main-img" src="assets/images/intro/intro-slider-candy.png" alt="candy">
@@ -29,21 +35,22 @@ title: Главная страница
                     <div class="left-line"></div>
                     <div class="right-line"></div>
                 </div>
-                <div class="swiper-slide">Видео – ролик с Курагой встроенный – не из ютуба.</div>
-                <div class="swiper-slide">Под вопросом Слайд №3:
-                    Красивая картинка с плантациями и фермером
-                    Надписи: Только натуральные ингредиенты (крупным шрифтом)
-                    Мы привозим самые свежие сухофрукты, орехи и цукаты со всего мира (мелким шрифтом)
-                </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide">Видео – ролик с Курагой встроенный – не из ютуба.</div>
+            <div class="swiper-slide">Под вопросом Слайд №3:
+                Красивая картинка с плантациями и фермером
+                Надписи: Только натуральные ингредиенты (крупным шрифтом)
+                Мы привозим самые свежие сухофрукты, орехи и цукаты со всего мира (мелким шрифтом)
+            </div>
         </div>
-        <button class="fixed-price-btn price-btn">
-            <span>оптовый прайс</span>
-            <svg>
-                <use href="#price"></use>
-            </svg>
-        </button>
+        <div class="swiper-pagination"></div>
+    </div>
+    <button class="fixed-price-btn price-btn">
+        <span>оптовый прайс</span>
+        <svg>
+            <use href="#price"></use>
+        </svg>
+    </button>
 </section>
 
 <section class="products-main section">
@@ -175,7 +182,10 @@ title: Главная страница
         </div>
         <button class="products-main__show-all hollow-btn">показать все разделы</button>
     </div>
-    <img class="products-leaf anim-fruit" src="assets/images/leafs/leaf-2.png" alt="anim-leaf">
+    <div class="anim-fruit__wrapper">
+        <img class="anim-fruit" src="assets/images/leafs/leaf-2.png" alt="anim-leaf">
+    </div>
+
 </section>
 
 <section class="benefits-main section">
@@ -213,7 +223,9 @@ title: Главная страница
             </div>
         </div>
     </div>
-    <img class="benefits-leaf anim-fruit" src="assets/images/leafs/leaf-5.png" alt="">
+    <div class="anim-fruit__wrapper">
+        <img class="anim-fruit" src="assets/images/leafs/leaf-5.png" alt="">
+    </div>
 </section>
 
 

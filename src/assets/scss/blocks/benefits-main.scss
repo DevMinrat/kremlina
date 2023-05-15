@@ -1,5 +1,16 @@
 .benefits-main {
   position: relative;
+
+  .anim-fruit__wrapper {
+    top: 5%;
+    left: 35%;
+    width: 12rem;
+
+    .anim-fruit {
+      transform: rotate(-18deg);
+      filter: drop-shadow(0px 1rem 15px rgba(76, 59, 60, 0.1));
+    }
+  }
 }
 
 .benefits-main__inner {
@@ -133,12 +144,4 @@
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
   }
-}
-
-.benefits-leaf {
-  top: 5%;
-  left: 35%;
-  width: 12rem;
-  transform: rotate(-18deg);
-  filter: drop-shadow(0px 1rem 15px rgba(76, 59, 60, 0.1));
 }

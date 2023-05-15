@@ -32,6 +32,7 @@
 
     @include breakpoint($sm-bp) {
       top: 2rem;
+      right: 1.6rem;
     }
 
     .swiper-pagination-bullet {
@@ -157,29 +158,100 @@
     }
   }
 
-  .is-almond {
-    transform: rotate(-17deg);
-    top: -4%;
-    left: 61%;
-
-    width: 16rem;
-  }
-  .is-prunes {
-    transform: scaleX(-1) rotate(-63deg);
-    top: 74%;
-    left: 62%;
-    width: 20rem;
-  }
-  .is-cherry {
-    top: 59%;
-    left: -7%;
-    width: 19rem;
-  }
-
   .anim-fruit {
     @include breakpoint($lg-bp) {
       display: none;
     }
+  }
+}
+
+.is-almond__wrapper {
+  position: absolute;
+
+  top: -4%;
+  left: 61%;
+
+  width: 16rem;
+
+  .is-almond {
+    position: static;
+
+    width: 100%;
+
+    transition: all 2s linear;
+
+    &.active {
+      animation: almondAnim 20s linear infinite;
+    }
+  }
+}
+
+@keyframes almondAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.is-prunes__wrapper {
+  position: absolute;
+
+  transform: scaleX(-1) rotate(-63deg);
+  top: 74%;
+  left: 62%;
+
+  width: 20rem;
+
+  .is-prunes {
+    position: static;
+
+    width: 100%;
+
+    transform: rotate(-17deg);
+
+    &.active {
+      animation: animateIntroFruits 6s linear 1s infinite alternate;
+    }
+  }
+}
+
+.is-cherry__wrapper {
+  position: absolute;
+
+  top: 59%;
+  left: -7%;
+  width: 19rem;
+
+  .is-cherry {
+    position: static;
+
+    width: 100%;
+
+    transform: rotate(-17deg);
+
+    &.active {
+      animation: animateIntroFruits 6s linear 0.5s infinite alternate;
+    }
+  }
+}
+
+@keyframes animateIntroFruits {
+  0% {
+    transform: translate(0, 0) rotate(-17deg);
+  }
+  25% {
+    transform: translate(-1rem, -1rem) rotate(-13deg);
+  }
+  50% {
+    transform: translate(-2rem, -2rem) rotate(-19deg);
+  }
+  75% {
+    transform: translate(-3rem, -1rem) rotate(-13deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-17deg);
   }
 }
 
@@ -223,8 +295,12 @@
 
 .intro-slider__first-buy {
   position: absolute;
-  right: 0;
+  right: 6rem;
   bottom: 7%;
+
+  @include breakpoint($xl-bp) {
+    right: 1.6rem;
+  }
 
   @include breakpoint($sm-bp) {
     position: static;
@@ -236,8 +312,8 @@
 
   position: absolute;
 
-  right: 0rem;
-  top: 88%;
+  right: 1.6rem;
+  top: 84.6%;
 
   height: 4.6rem;
 
@@ -266,7 +342,7 @@
 
 .left-line {
   position: absolute;
-  left: 0;
+  left: 6rem;
   top: 53.5%;
   z-index: 3;
 
@@ -275,13 +351,18 @@
 
   background: #ddccf2;
 
+  @include breakpoint($xl-bp) {
+    left: 1.6rem;
+  }
+
   @include breakpoint($lg-bp) {
     display: none;
   }
 }
+
 .right-line {
   position: absolute;
-  right: 0%;
+  right: 6rem;
   top: 80.3%;
   z-index: 3;
 
@@ -289,6 +370,10 @@
   height: 0.2rem;
 
   background: #ddccf2;
+
+  @include breakpoint($xl-bp) {
+    right: 1.6rem;
+  }
 
   @include breakpoint($lg-bp) {
     display: none;

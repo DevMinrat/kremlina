@@ -33,3 +33,52 @@
     left: 0;
   }
 }
+
+.anim-fruit__wrapper {
+  position: absolute;
+
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateY(30rem);
+  transition: all 1s ease;
+
+  &.from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &.from-top {
+    opacity: 1;
+    transform: translateY(-30rem);
+  }
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+
+  .anim-fruit {
+    position: static;
+
+    width: 100%;
+
+    will-change: transform, opacity;
+    animation: animateFruits 6s linear infinite alternate;
+  }
+}
+
+@keyframes animateFruits {
+  0% {
+    transform: translate(0, 0) rotate(210deg);
+  }
+  25% {
+    transform: translate(-1rem, -1rem) rotate(213deg);
+  }
+  50% {
+    transform: translate(-2rem, -2rem) rotate(215deg);
+  }
+  75% {
+    transform: translate(-3rem, -1rem) rotate(213deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(210deg);
+  }
+}
