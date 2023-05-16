@@ -113,6 +113,12 @@ h1.buy-title {
       background: $primary;
       border-radius: 50%;
     }
+
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
   }
 
   & + p {

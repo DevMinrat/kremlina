@@ -53,7 +53,7 @@
 
   border-radius: 2rem;
 
-  cursor: url(../images/main-products/cursor.svg) 55 55, pointer;
+  cursor: pointer;
 
   @include breakpoint($sm-bp) {
     justify-content: flex-start;
