@@ -105,12 +105,13 @@ a {
 @import "blocks/buy.scss";
 
 @import "blocks/price-modal.scss";
+@import "blocks/contacts-popup.scss";
 
 @import "blocks/footer";
 
 .fixed-price-btn {
   position: fixed;
-  right: -8.6rem;
+  right: -9rem;
   top: 30%;
   z-index: 30;
 

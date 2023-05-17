@@ -94,10 +94,28 @@ title: Страница продукта
                     <div class="product-img__wrapper">
                         <div class="product-img__blur-circle">
                             <div class="blur-circle-inner">
-                                <img class="product-img" src="assets/images/product/product-img.png" alt="">
+                                <div class="product-img__slider">
+                                    <div class="swiper-wrapper">
+                                        <img class="product-img swiper-slide"
+                                            src="assets/images/product/product-img.png" alt="">
+                                        <img class="product-img swiper-slide"
+                                            src="assets/images/product/product-img.png" alt="">
+                                        <img class="product-img swiper-slide"
+                                            src="assets/images/product/product-img.png" alt="">
+                                    </div>
+                                    <div class="slider__btn-prev">
+                                        <svg>
+                                            <use href="#arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="slider__btn-next">
+                                        <svg>
+                                            <use href="#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                         <div class="is-almond__wrapper">
                             <img class="is-almond anim-fruit active" src="assets/images/nuts/almond.png" alt="fruit">
                         </div>

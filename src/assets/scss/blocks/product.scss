@@ -43,7 +43,7 @@
 .product-main {
   width: 71rem;
 
-  @include breakpoint($sm-bp) {
+  @include breakpoint($lg-bp) {
     width: 100%;
   }
 }
@@ -263,5 +263,24 @@
 
   @include breakpoint($sm-bp) {
     width: 100%;
+  }
+}
+
+.product-img__slider {
+  width: 40rem;
+
+  @include breakpoint($sm-bp) {
+    width: 24rem;
+  }
+
+  .slider__btn-prev {
+    position: absolute;
+    left: -10rem;
+    top: 46%;
+  }
+  .slider__btn-next {
+    position: absolute;
+    right: -10rem;
+    top: 46%;
   }
 }

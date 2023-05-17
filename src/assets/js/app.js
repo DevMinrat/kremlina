@@ -453,7 +453,6 @@ const priceModalClose = document.querySelector(".price-modal__close");
 if (priceModal) {
   priceBtns.forEach((el) => {
     el.addEventListener("click", () => {
-      console.log(1);
       priceModal.classList.add("active");
     });
   });
@@ -470,7 +469,14 @@ if (priceModal) {
       return;
     }
 
-    console.log(2);
     this.classList.remove("active");
   });
+}
+
+const contactsPopup = document.querySelector(".contacts-popup");
+
+if (contactsPopup) {
+  setTimeout(() => {
+    contactsPopup.classList.remove("hide");
+  }, 10000);
 }

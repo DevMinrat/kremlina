@@ -361,18 +361,6 @@ if (productBlock && window.innerWidth > 500) {
         duration: 0.6,
       }
     )
-    .fromTo(
-      productImg,
-      {
-        scale: 0,
-        opacity: 0,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.6,
-      }
-    )
     .from(productAlmond, {
       y: -300,
       opacity: 0,
@@ -393,11 +381,6 @@ if (productBlock && window.innerWidth > 500) {
       },
       "-=0.2"
     )
-    .to(productHollowCircle, {
-      duration: 4,
-      rotate: 360,
-      ease: "power3.out",
-    })
     .to(productFruits, {
       onComplete: () => {
         productFruits.forEach((el) => {

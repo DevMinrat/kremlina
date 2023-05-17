@@ -1,0 +1,104 @@
+.contacts-popup {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  .contacts-popup__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 11;
+
+    width: 3.2rem;
+    height: 3.2rem;
+
+    stroke: #beb0b0;
+
+    cursor: pointer;
+
+    &:hover {
+      stroke: $black;
+    }
+  }
+
+  .contacts-popup__inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50rem;
+
+    .custom-input {
+      height: 5rem;
+    }
+  }
+}
+
+.thx-popup {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.thx-popup__inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 56rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+
+  background: #ffffff;
+  border-radius: 2rem;
+
+  padding: 6rem 9rem;
+}
+.thx-popup__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 11;
+
+  width: 3.2rem;
+  height: 3.2rem;
+
+  stroke: #beb0b0;
+
+  cursor: pointer;
+
+  &:hover {
+    stroke: $black;
+  }
+}
+.thx-popup__title {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: #4c3b3c;
+  text-align: center;
+}
+.thx-popup__descr {
+}

@@ -114,3 +114,27 @@ window.addEventListener("resize", () => {
     toggleSertifSlider();
   }
 });
+
+const productSlider = new Swiper(".product-img__slider", {
+  slidesPerView: "auto",
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  spaceBetween: 0,
+
+  navigation: {
+    nextEl: ".slider__btn-next",
+    prevEl: ".slider__btn-prev",
+  },
+
+  breakpoints: {
+    //   900: {
+    //     spaceBetween: 50,
+    //   },
+    //   1350: {
+    //     slidesPerView: "auto",
+    //     spaceBetween: 80,
+    //   },
+  },
+});
