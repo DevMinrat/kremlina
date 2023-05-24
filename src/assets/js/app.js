@@ -471,12 +471,9 @@ if (priceModal) {
 
     this.classList.remove("active");
   });
-}
 
-const contactsPopup = document.querySelector(".contacts-popup");
 
-if (contactsPopup) {
   setTimeout(() => {
-    contactsPopup.classList.remove("hide");
+    priceModal.classList.add("active");
   }, 10000);
 }

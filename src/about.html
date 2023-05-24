@@ -15,12 +15,27 @@ title: О компании
     <div class="intro-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <iframe src="https://www.youtube.com/embed/rFMzSXuK4h4" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+                <video controls>
+                    <source src="assets/images/intro/kremlina-video.mp4" type="video/webm">
+                </video>
             </div>
-            <div class="swiper-slide">Слайд 2</div>
-            <div class="swiper-slide">Слайд 3
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="natural">
+                        <p class="natural-title">Только натуральные ингредиенты</p>
+                        <p class="natural-descr">Мы привозим самые свежие сухофрукты, орехи и цукаты со всего мира</p>
+                    </div>
+                    <img class="natural-img" src="assets/images/intro/intro-img-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="natural">
+                        <p class="natural-title">Только натуральные ингредиенты</p>
+                        <p class="natural-descr">Мы привозим самые свежие сухофрукты, орехи и цукаты со всего мира</p>
+                    </div>
+                    <img class="natural-img" src="assets/images/intro/intro-img-3.jpg" alt="">
+                </div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -328,3 +343,12 @@ title: О компании
         </div>
     </div>
 </section>
+
+<button class="fixed-price-btn price-btn">
+    <span>Получить прайс</span>
+    <svg>
+        <use href="#price"></use>
+    </svg>
+</button>
+
+{{> price-modal}}

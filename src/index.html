@@ -15,7 +15,6 @@ title: Главная страница
                     </div>
                     <div class="is-slide__content">
                         <div class="hollow-circle">
-
                             <div class="is-almond__wrapper">
                                 <img class="is-almond anim-fruit" src="assets/images/nuts/almond.png" alt="fruit">
                             </div>
@@ -36,11 +35,19 @@ title: Главная страница
                     <div class="right-line"></div>
                 </div>
             </div>
-            <div class="swiper-slide">Видео – ролик с Курагой встроенный – не из ютуба.</div>
-            <div class="swiper-slide">Под вопросом Слайд №3:
-                Красивая картинка с плантациями и фермером
-                Надписи: Только натуральные ингредиенты (крупным шрифтом)
-                Мы привозим самые свежие сухофрукты, орехи и цукаты со всего мира (мелким шрифтом)
+            <div class="swiper-slide">
+                <video controls>
+                    <source src="assets/images/intro/kremlina-video.mp4" type="video/webm">
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="natural">
+                        <p class="natural-title">Только натуральные ингредиенты</p>
+                        <p class="natural-descr">Мы привозим самые свежие сухофрукты, орехи и цукаты со всего мира</p>
+                    </div>
+                    <img class="natural-img" src="assets/images/intro/intro-img-3.jpg" alt="">
+                </div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -230,95 +237,4 @@ title: Главная страница
 
 
 
-<div class="price-modal">
-    <div class="price-modal__inner">
-        <svg class="price-modal__close">
-            <use href="#cross"></use>
-        </svg>
-        <p class="price-modal__title">Хочу Получить прайс</p>
-        <input class="custom-input" type="text" placeholder="Название компании">
-        <input class="custom-input" type="email" placeholder="E-mail">
-        <input class="custom-input" type="tel" placeholder="Телефон">
-        <div class="price-modal__dropdown dropdown-container">
-            <p class="dropdown-link">
-                <span>Выберите из списка</span>
-                <svg>
-                    <use href="#chevron"></use>
-                </svg>
-            </p>
-            <div class="dropdown-list">
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox" checked>
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Весь ассортимент</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Новинки</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox" checked>
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Конфеты</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Драже</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Конфеты в пакетах</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Конфеты в коробках</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Конфеты в тубах</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Батончики</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Сувенирная продукция</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Сухофрукты</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Орехи</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">Цукаты</span>
-                </label>
-                <label class="checkbox">
-                    <input class="custom-checkbox" type="checkbox">
-                    <span class="checkbox-square"></span>
-                    <span class="checkbox-descr">В подарок</span>
-                </label>
-            </div>
-        </div>
-        <label class="checkbox">
-            <input class="custom-checkbox" type="checkbox" checked>
-            <span class="checkbox-square"></span>
-            <span class="checkbox-descr">Согласен на обработку данных</span>
-        </label>
-        <button class="order-form__sbm-btn filled-btn">Получить прайс</button>
-    </div>
-</div>
+{{> price-modal}}

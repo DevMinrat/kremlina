@@ -12,6 +12,13 @@
   .container {
     height: 100%;
   }
+
+  video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
 }
 
 .intro-slider {
@@ -378,4 +385,43 @@
   @include breakpoint($lg-bp) {
     display: none;
   }
+}
+
+.natural {
+  margin-top: 6rem;
+}
+.natural-title {
+  max-width: 65rem;
+
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 100%;
+  color: #4c3b3c;
+
+  margin-bottom: 4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 4rem;
+  }
+}
+.natural-descr {
+  max-width: 47rem;
+
+  font-size: 2.4rem;
+  line-height: 120%;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+  }
+}
+.natural-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

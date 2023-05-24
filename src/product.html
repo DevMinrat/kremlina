@@ -87,7 +87,7 @@ title: Страница продукта
             </aside>
             <div class="product__content">
                 <div class="product-main">
-                    <h1 class="product-heading">Финик Кремлина шоколадный</h1>
+                    <h1 class="product-heading">Финик Кремлина шоколадный с арахисом</h1>
                     <p class="product-descr">В арахисе содержатся уникальные аминокислоты, а финик является прекрасным
                         источником углеводов и протеина. Эти конфеты не только очень полезны, но и будут по душе
                         любителям сладкого перекуса.</p>
@@ -117,13 +117,15 @@ title: Страница продукта
                             </div>
                         </div>
                         <div class="is-almond__wrapper">
-                            <img class="is-almond anim-fruit active" src="assets/images/nuts/almond.png" alt="fruit">
+                            <img class="is-almond anim-fruit active" src="assets/images/nuts/peanut.png" alt="fruit">
                         </div>
                         <div class="is-prunes__wrapper">
-                            <img class="is-prunes anim-fruit active" src="assets/images/fruits/prunes.png" alt="fruit">
+                            <img class="is-prunes anim-fruit active" src="assets/images/fruits/date-fruit.png"
+                                alt="fruit">
                         </div>
                         <div class="is-cherry__wrapper">
-                            <img class="is-cherry anim-fruit active" src="assets/images/berries/cherry.png" alt="fruit">
+                            <img class="is-cherry anim-fruit active" src="assets/images/other/chocolate.png"
+                                alt="fruit">
                         </div>
                     </div>
                 </div>
@@ -182,3 +184,12 @@ title: Страница продукта
             </div>
         </div>
     </div>
+
+    <button class="fixed-price-btn price-btn">
+        <span>Получить прайс</span>
+        <svg>
+            <use href="#price"></use>
+        </svg>
+    </button>
+
+    {{>price-modal}}
